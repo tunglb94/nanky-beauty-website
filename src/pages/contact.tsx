@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import { motion } from 'framer-motion';
-import Button from '../components/ui/Button'; 
+import Button from '../components/ui/Button';
 import { useI18n } from '../hooks/useI18n';
 
 // ===============================================
@@ -119,8 +119,13 @@ const SocialLinkButton = styled(motion.a)`
 const ContactPage: React.FC = () => {
     const { t } = useI18n();
 
-    const seoData = t('contact_page.seo') as { title: string; description: string; keywords: string; };
-    const globalSeo = t('global_seo') as { site_name: string; title_separator: string; };
+    // SỬA LỖI: Kiểm tra kiểu dữ liệu an toàn
+    const seoDataRaw = t('contact_page.seo');
+    const seoData = typeof seoDataRaw === 'object' ? seoDataRaw : { title: '', description: '', keywords: '' };
+
+    const globalSeoRaw = t('global_seo');
+    const globalSeo = typeof globalSeoRaw === 'object' ? globalSeoRaw : { site_name: 'Nanky Beauty', title_separator: '|' };
+
     const pageTitle = `${seoData.title} ${globalSeo.title_separator} ${globalSeo.site_name}`;
     
     const pageHeaderText = t('contact_page.title') || 'Liên Hệ & Đặt Lịch';
@@ -135,9 +140,11 @@ const ContactPage: React.FC = () => {
     const whatsappUrl = 'https://wa.me/qr/NYRFHAP4FOWQN1'; 
     const instagramChatUrl = 'https://ig.me/nanky.beaute'; 
     
-    const facebookUrl = t('footer.social_links.0.url') || '#';
-    const instagramUrl = t('footer.social_links.1.url') || '#';
-    const tiktokUrl = t('footer.social_links.3.url') || '#';
+    const socialLinksRaw = t('footer.social_links');
+    const socialLinks = Array.isArray(socialLinksRaw) ? socialLinksRaw : [];
+    const facebookUrl = socialLinks.find(l => l.name === 'Facebook')?.url || '#';
+    const instagramUrl = socialLinks.find(l => l.name === 'Instagram')?.url || '#';
+    const tiktokUrl = socialLinks.find(l => l.name === 'TikTok')?.url || '#';
 
     return (
         <>
@@ -154,7 +161,7 @@ const ContactPage: React.FC = () => {
                       "@context": "https://schema.org",
                       "@type": "BeautySalon",
                       "name": "Nanky Beauty",
-                      "image": "https://YOUR_DOMAIN.com/images/logos/nanky-exclusive.png",
+                      "image": "https://nankybeauty.com/images/social/default-sharing-image.jpg",
                       "telephone": "+84852759678",
                       "address": {
                         "@type": "PostalAddress",
@@ -164,20 +171,12 @@ const ContactPage: React.FC = () => {
                         "postalCode": "700000",
                         "addressCountry": "VN"
                       },
-                      "url": "https://YOUR_DOMAIN.com/contact",
+                      "url": "https://nankybeauty.com/contact",
                       "priceRange": "$$",
                       "openingHoursSpecification": [
                         {
                           "@type": "OpeningHoursSpecification",
-                          "dayOfWeek": [
-                            "Monday",
-                            "Tuesday",
-"Wednesday",
-                            "Thursday",
-                            "Friday",
-                            "Saturday",
-                            "Sunday"
-                          ],
+                          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
                           "opens": "08:00",
                           "closes": "21:00"
                         }
@@ -273,17 +272,16 @@ const ContactPage: React.FC = () => {
                 </ContactInfoContainer>
                 
                 <MapContainer>
-                    {/* ĐÃ CẬP NHẬT MÃ IFRAME MỚI CỦA BẠN */}
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2407360289103!2d106.735243!3d10.792865199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763a679086b%3A0x86427b75c9201eb9!2zTmFua3kgQmVhdXR5IC0gTuG7kWkgbWkgY2h1ecOqbiBuZ2hp4buHcA!5e0!3m2!1svi!2s!4v1760305589991!5m2!1svi!2s" 
-                        width="600" 
-                        height="450" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2407360289103!2d106.735243!3d10.792865199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763a679086b%3A0x86427b75c9201eb9!2zTmFua3kgQmVhdXR5IC0gTuG7kWkgbWkgY2h1ecOqbiBuZ2hp4buHcA!5e0!3m2!1svi!2s!4v1760305589991!5m2!1svi!2s"
+                        width="100%" 
+                        height="100%" 
                         style={{border:0}} 
                         allowFullScreen={false} 
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Bản đồ địa chỉ Nanky Beauty tại Quận 2, TP. HCM">
-                    </iframe>
+                        title="Bản đồ địa chỉ Nanky Beauty tại Quận 2, TP. HCM"
+                    />
                 </MapContainer>
             </ContactPageWrapper>
             <Footer />

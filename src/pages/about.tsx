@@ -35,9 +35,14 @@ const TimelineEvent = styled.p` font-size: 1.1rem; margin-top: 20px; color: #ccc
 
 const AboutPage: React.FC = () => {
     const { t } = useI18n();
+
+    // SỬA LỖI: Kiểm tra kiểu dữ liệu an toàn
+    const seoDataRaw = t('about_page.seo');
+    const seoData = typeof seoDataRaw === 'object' ? seoDataRaw : { title: '', description: '', keywords: '' };
+
+    const globalSeoRaw = t('global_seo');
+    const globalSeo = typeof globalSeoRaw === 'object' ? globalSeoRaw : { site_name: 'Nanky Beauty', title_separator: '|' };
     
-    const seoData = t('about_page.seo') as { title: string; description: string; keywords: string; };
-    const globalSeo = t('global_seo') as { site_name: string; title_separator: string; };
     const pageTitle = `${seoData.title} ${globalSeo.title_separator} ${globalSeo.site_name}`;
     
     const parseI18nJson = (key: string) => { const value = t(key); if (typeof value === 'string') { try { return JSON.parse(value); } catch (e) { return []; } } return Array.isArray(value) ? value : []; };
@@ -59,7 +64,7 @@ const AboutPage: React.FC = () => {
     const yParallax = useTransform(scrollY, [0, 800], ['0%', '30%']); 
     const titleVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.05, } }, };
     const charVariants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, };
-    const titleText = t('header.about');
+    const titleText = "VỀ CHÚNG TÔI";
     const timelineRef = useRef(null);
     const { scrollYProgress: timelineScrollProgress } = useScroll({ target: timelineRef, offset: ["start end", "end start"] });
     const xTimeline: MotionValue<string> = useTransform(timelineScrollProgress, [0, 1], ["-20%", "20%"]); 
@@ -79,7 +84,7 @@ const AboutPage: React.FC = () => {
             <Header />
             <PageWrapper>
                 <HeroBanner>
-                    <HeroImage style={{ y: yParallax, backgroundImage: `url('${heroImageUrl}')` }} role="img" aria-label={`Về Nanky Beauty - Tiệm nối mi uy tín tại Quận 2`} />
+                    <HeroImage style={{ y: yParallax, backgroundImage: `url('${heroImageUrl}')` }} />
                     <HeroOverlay />
                     <HeroTitle variants={titleVariants} initial="hidden" animate="visible">
                         {titleText.split("").map((char, index) => ( <motion.span key={index} variants={charVariants} style={{ display: 'inline-block', marginRight: char === ' ' ? '15px' : '0' }}>{char}</motion.span> ))}
@@ -93,7 +98,7 @@ const AboutPage: React.FC = () => {
                         <SectionText> **SỨ MỆNH:** "{missionText}" </SectionText>
                         <SectionText> **TẦM NHÌN:** "{visionText}" </SectionText>
                     </PhilosophyTextColumn>
-                    <PhilosophyImageColumn style={{ backgroundImage: `url('${philosophyImageUrl}')` }} role="img" aria-label="Triết lý nối mi an toàn và chất lượng tại Nanky Beauty" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5, type: 'spring' }} />
+                    <PhilosophyImageColumn style={{ backgroundImage: `url('${philosophyImageUrl}')` }} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5, type: 'spring' }} />
                 </PhilosophySection>
                 <PillarsSection>
                     <SectionHeader>

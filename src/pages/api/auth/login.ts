@@ -38,13 +38,17 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
 
-    // Lấy địa chỉ IP của người dùng. Ưu tiên header từ proxy/load balancer.
-    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
+    // SỬA LỖI: Lấy địa chỉ IP và đảm bảo nó luôn là một chuỗi (string)
+    const forwarded = req.headers['x-forwarded-for'];
+    const ip = typeof forwarded === 'string' ? forwarded.split(',')[0]?.trim() : req.socket.remoteAddress;
+    
+    // Nếu không xác định được IP, dùng một giá trị mặc định để tránh lỗi
+    const key = ip || 'unknown';
 
     try {
         // Kiểm tra xem IP có bị khóa hay không
-        await limiter.consume(ip);
-    } catch (limiterResponse) {
+        await limiter.consume(key);
+    } catch (limiterResponse: any) {
         // Nếu IP bị khóa, trả về lỗi
         const secs = Math.ceil(limiterResponse.msBeforeNext / 1000);
         res.setHeader('Retry-After', String(secs));
@@ -75,7 +79,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         if (!isUsernameCorrect || !isPasswordCorrect) {
             // Nếu đăng nhập sai, ghi nhận một lần thử thất bại cho IP này
             try {
-                await limiter.consume(ip);
+                // Sử dụng 'key' đã được làm sạch
+                await limiter.consume(key, 1);
             } catch (err) {
                 // Lỗi này không cần xử lý, chỉ để ghi nhận
             }
@@ -83,7 +88,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         }
 
         // Nếu đăng nhập thành công, reset bộ đếm cho IP này
-        await limiter.delete(ip);
+        await limiter.delete(key);
 
         const token = jwt.sign(
             { username: ADMIN_USERNAME, role: 'admin' },
@@ -95,7 +100,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             httpOnly: true,
             secure: process.env.NODE_ENV !== 'development',
             sameSite: 'strict',
-            maxAge: 60 * 60 * 8,
+            maxAge: 60 * 60 * 8, // 8 hours
             path: '/',
         });
 

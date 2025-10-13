@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 // *** ĐÃ THAY THẾ HÀM MOCK BẰNG IMPORT HOOK THỰC TẾ ***
-import { useI18n } from '../../hooks/useI18n'; 
+import { useI18n } from '../../hooks/useI18n';
 // ******************************************************
 
 const FooterWrapper = styled.footer`
@@ -181,93 +181,95 @@ const Copyright = styled.div`
 `;
 
 const Footer: React.FC = () => {
-  const { t } = useI18n();
-  const socialLinks = t('footer.social_links') as { name: string; url: string; icon: string }[];
+    const { t } = useI18n();
 
-  return (
-    <FooterWrapper>
-      <FooterGrid>
-        <Column>
-          <FooterLogo>Nanky Beauty</FooterLogo>
-          
-          <FooterHeading>{t('footer.legal_title')}</FooterHeading>
-          <ContactInfo className="legal">{t('footer.business_reg_dept')}</ContactInfo>
-          <ContactInfo className="legal">{t('footer.hkd_name')}</ContactInfo>
-          <ContactInfo className="legal">{t('footer.hkd_code')}</ContactInfo>
-          <ContactInfo className="legal">{t('footer.reg_code')}</ContactInfo>
-          
-          <FooterHeading>{t('footer.contact_title')}</FooterHeading>
-          <ContactInfo>{t('footer.address')}</ContactInfo>
-          <ContactInfo>{t('footer.hotline')}</ContactInfo>
-          
-          <FooterHeading>{t('footer.hours_title')}</FooterHeading>
-          <ContactInfo>{t('footer.hours')}</ContactInfo>
-          <ContactInfo>{t('footer.days')}</ContactInfo>
-          <ContactInfo>{t('footer.parking')}</ContactInfo>
-          
-        </Column>
+    // SỬA LỖI TẠI ĐÂY: Kiểm tra kiểu dữ liệu và cung cấp giá trị mặc định
+    const socialLinksData = t('footer.social_links');
+    const socialLinks = Array.isArray(socialLinksData) ? socialLinksData : [];
 
-        <Column>
-          <FooterHeading>{t('footer.location_title')}</FooterHeading>
-          <MapContainer>
-            {/* ĐÃ CẬP NHẬT MÃ IFRAME MỚI CỦA BẠN */}
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2407360289103!2d106.735243!3d10.792865199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763a679086b%3A0x86427b75c9201eb9!2zTmFua3kgQmVhdXR5IC0gTuG7kWkgbWkgY2h1ecOqbiBuZ2hp4buHcA!5e0!3m2!1svi!2s!4v1760305589991!5m2!1svi!2s" 
-                width="600" 
-                height="450" 
-                style={{border:0}} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Bản đồ địa chỉ Nanky Beauty tại Quận 2, TP. HCM">
-            </iframe>
-          </MapContainer>
-        </Column>
+    return (
+        <FooterWrapper>
+            <FooterGrid>
+                <Column>
+                    <FooterLogo>Nanky Beauty</FooterLogo>
+                    
+                    <FooterHeading>{t('footer.legal_title')}</FooterHeading>
+                    <ContactInfo className="legal">{t('footer.business_reg_dept')}</ContactInfo>
+                    <ContactInfo className="legal">{t('footer.hkd_name')}</ContactInfo>
+                    <ContactInfo className="legal">{t('footer.hkd_code')}</ContactInfo>
+                    <ContactInfo className="legal">{t('footer.reg_code')}</ContactInfo>
+                    
+                    <FooterHeading>{t('footer.contact_title')}</FooterHeading>
+                    <ContactInfo>{t('footer.address')}</ContactInfo>
+                    <ContactInfo>{t('footer.hotline')}</ContactInfo>
+                    
+                    <FooterHeading>{t('footer.hours_title')}</FooterHeading>
+                    <ContactInfo>{t('footer.hours')}</ContactInfo>
+                    <ContactInfo>{t('footer.days')}</ContactInfo>
+                    <ContactInfo>{t('footer.parking')}</ContactInfo>
+                    
+                </Column>
 
-        <Column>
-          <FooterHeading>{t('header.services')}</FooterHeading>
-          <ContactInfo>{t('service_0_title')}</ContactInfo>
-          <ContactInfo>{t('service_1_title')}</ContactInfo>
-          <ContactInfo>{t('service_2_title')}</ContactInfo>
-          <ContactInfo>{t('service_3_title')}</ContactInfo>
-        </Column>
+                <Column>
+                    <FooterHeading>{t('footer.location_title')}</FooterHeading>
+                    <MapContainer>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2407360289103!2d106.735243!3d10.792865199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763a679086b%3A0x86427b75c9201eb9!2zTmFua3kgQmVhdXR5IC0gTuG7kWkgbWkgY2h1ecOqbiBuZ2hp4buHcA!5e0!3m2!1svi!2s!4v1760305589991!5m2!1svi!2s" 
+                            width="600" 
+                            height="450" 
+                            style={{border:0}} 
+                            allowFullScreen={false} 
+                            loading="lazy" 
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Bản đồ địa chỉ Nanky Beauty tại Quận 2, TP. HCM">
+                        </iframe>
+                    </MapContainer>
+                </Column>
 
-        <Column>
-          <FooterHeading>{t('footer.social_title')}</FooterHeading>
-          <SocialIcons>
-            <SocialLink 
-                href={socialLinks.find(l => l.name === 'Facebook')?.url}
-                target="_blank"
-                whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-            >
-                <FacebookIcon />
-            </SocialLink>
-            <SocialLink 
-                href={socialLinks.find(l => l.name === 'Instagram')?.url} 
-                target="_blank"
-                whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-            >
-                <InstagramIcon />
-            </SocialLink>
-            <SocialLink 
-                href={socialLinks.find(l => l.name === 'Zalo')?.url} 
-                target="_blank"
-                whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.9 }}
-            >
-                <ZaloIcon />
-            </SocialLink>
-          </SocialIcons>
-        </Column>
-      </FooterGrid>
+                <Column>
+                    <FooterHeading>{t('header.services')}</FooterHeading>
+                    <ContactInfo>{t('service_0_title')}</ContactInfo>
+                    <ContactInfo>{t('service_1_title')}</ContactInfo>
+                    <ContactInfo>{t('service_2_title')}</ContactInfo>
+                    <ContactInfo>{t('service_3_title')}</ContactInfo>
+                </Column>
 
-      <Copyright>
-        © {new Date().getFullYear()} Nanky Beauty. All Rights Reserved. {t('footer.copyright_design')}
-      </Copyright>
-    </FooterWrapper>
-  );
+                <Column>
+                    <FooterHeading>{t('footer.social_title')}</FooterHeading>
+                    <SocialIcons>
+                        <SocialLink 
+                            href={socialLinks.find(l => l.name === 'Facebook')?.url}
+                            target="_blank"
+                            whileHover={{ scale: 1.15 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            <FacebookIcon />
+                        </SocialLink>
+                        <SocialLink 
+                            href={socialLinks.find(l => l.name === 'Instagram')?.url} 
+                            target="_blank"
+                            whileHover={{ scale: 1.15 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            <InstagramIcon />
+                        </SocialLink>
+                        <SocialLink 
+                            href={socialLinks.find(l => l.name === 'Zalo')?.url} 
+                            target="_blank"
+                            whileHover={{ scale: 1.15 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            <ZaloIcon />
+                        </SocialLink>
+                    </SocialIcons>
+                </Column>
+            </FooterGrid>
+
+            <Copyright>
+                © {new Date().getFullYear()} Nanky Beauty. All Rights Reserved. {t('footer.copyright_design')}
+            </Copyright>
+        </FooterWrapper>
+    );
 };
 
 export default Footer;

@@ -20,8 +20,13 @@ const MainContent = styled.main`
 const Home: React.FC = () => {
   const { t } = useI18n();
 
-  const seoData = t('hero.seo') as { title: string; description: string; keywords: string; };
-  const globalSeo = t('global_seo') as { site_name: string; title_separator: string; };
+  // SỬA LỖI: Kiểm tra kiểu dữ liệu an toàn
+  const seoDataRaw = t('hero.seo');
+  const seoData = typeof seoDataRaw === 'object' ? seoDataRaw : { title: '', description: '', keywords: '' };
+
+  const globalSeoRaw = t('global_seo');
+  const globalSeo = typeof globalSeoRaw === 'object' ? globalSeoRaw : { site_name: 'Nanky Beauty', title_separator: '|' };
+  
   const pageTitle = `${globalSeo.site_name} ${globalSeo.title_separator} ${seoData.title}`;
 
   return (

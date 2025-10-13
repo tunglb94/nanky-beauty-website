@@ -7,12 +7,13 @@ import type { ContentState, AdminEditorProps } from '../../types/admin';
 // ===============================================
 // DYNAMIC IMPORTS
 // ===============================================
-const AdminHomepageEditor = dynamic(() => import('components/admin/AdminContentEditor'));
-const AdminAboutEditor = dynamic(() => import('components/admin/AdminAboutEditor'));
-const AdminServicesEditor = dynamic(() => import('components/admin/AdminServicesEditor'));
+const AdminHomepageEditor = dynamic(() => import('../../components/admin/AdminContentEditor'));
+const AdminAboutEditor = dynamic(() => import('../../components/admin/AdminAboutEditor'));
+const AdminServicesEditor = dynamic(() => import('../../components/admin/AdminServicesEditor'));
+const AdminGalleryEditor = dynamic(() => import('../../components/admin/AdminGalleryEditor'));
 
 // ===============================================
-// UI/UX NÂNG CẤP - GIAO DIỆN QUẢN TRỊ CHUYÊN NGHIỆP
+// UI/UX
 // ===============================================
 const AdminPageWrapper = styled.div`
   min-height: 100vh;
@@ -163,6 +164,7 @@ const AdminSections: { [key: string]: string[] } = {
     Home: ['Hero', 'WhyUs', 'Services', 'GalleryTeaser', 'Testimonials', 'Materials', 'CTA'],
     About: ['HeroBanner', 'Philosophy', 'Pillars', 'Timeline', 'CTA'],
     Services: ['ServiceList'],
+    Gallery: [],
     Account: [],
 };
 
@@ -170,8 +172,10 @@ const AdminDashboard: React.FC = () => {
     const router = useRouter();
     const languages: ('vi' | 'en' | 'ru' | 'kr' | 'zh')[] = ['vi', 'en', 'ru', 'kr', 'zh'];
     
-    const [activePage, setActivePage] = useState<string>(() => (typeof window !== 'undefined' ? sessionStorage.getItem('adminActivePage') || 'Home' : 'Home'));
-    const [activeInternalSection, setActiveInternalSection] = useState<string>(() => (typeof window !== 'undefined' ? sessionStorage.getItem('adminActiveInternalSection') || AdminSections.Home[0] : AdminSections.Home[0]));
+    // SỬA LỖI HYDRATION: Khởi tạo state với giá trị mặc định
+    const [activePage, setActivePage] = useState<string>('Home');
+    const [activeInternalSection, setActiveInternalSection] = useState<string>(AdminSections.Home[0]);
+
     const [currentLang, setCurrentLang] = useState<'vi' | 'en' | 'ru' | 'kr' | 'zh'>('vi');
     const [content, setContent] = useState<ContentState | null>(null);
     const [rawContent, setRawContent] = useState('');
@@ -179,12 +183,33 @@ const AdminDashboard: React.FC = () => {
     const [status, setStatus] = useState('');
     const [isRaw, setIsRaw] = useState(false);
 
+    // SỬA LỖI HYDRATION: Dùng useEffect để đọc sessionStorage chỉ ở phía client
+    useEffect(() => {
+        const savedPage = sessionStorage.getItem('adminActivePage');
+        const savedSection = sessionStorage.getItem('adminActiveInternalSection');
+        if (savedPage && AdminSections[savedPage] !== undefined) {
+            setActivePage(savedPage);
+            // Chỉ đặt lại section nếu nó hợp lệ cho page đã lưu
+            if (savedSection && AdminSections[savedPage].includes(savedSection)) {
+                setActiveInternalSection(savedSection);
+            } else if(AdminSections[savedPage].length > 0) {
+                 setActiveInternalSection(AdminSections[savedPage][0]);
+            }
+        }
+    }, []);
+
+    // Lưu state vào sessionStorage mỗi khi nó thay đổi
     useEffect(() => {
         sessionStorage.setItem('adminActivePage', activePage);
         sessionStorage.setItem('adminActiveInternalSection', activeInternalSection);
     }, [activePage, activeInternalSection]);
 
+    // Chỉ fetch content cho các trang cần file locales
     useEffect(() => {
+        if (activePage === 'Gallery' || activePage === 'Account') {
+            setContent(null); // Reset content khi không cần
+            return;
+        }
         setIsLoading(true);
         fetch(`/api/content?lang=${currentLang}`)
           .then(res => res.json())
@@ -197,7 +222,7 @@ const AdminDashboard: React.FC = () => {
             setStatus('Error loading content.');
             setIsLoading(false);
           });
-    }, [currentLang]);
+    }, [currentLang, activePage]);
 
     const updateContent = (path: (string | number)[], value: string | null) => {
         if (!content) return;
@@ -269,7 +294,13 @@ const AdminDashboard: React.FC = () => {
         router.push('/admin/login');
     };
 
-    const primaryNavSections = [{ key: 'Home', label: 'Trang Chủ' }, { key: 'About', label: 'Trang Về Chúng Tôi' }, { key: 'Services', label: 'Trang Dịch Vụ' }, { key: 'Account', label: 'Tài Khoản' }];
+    const primaryNavSections = [
+        { key: 'Home', label: 'Trang Chủ' }, 
+        { key: 'About', label: 'Trang Về Chúng Tôi' }, 
+        { key: 'Services', label: 'Trang Dịch Vụ' }, 
+        { key: 'Gallery', label: 'Quản lý Gallery' },
+        { key: 'Account', label: 'Tài Khoản' }
+    ];
     
     const handlePrimaryNavClick = (pageKey: string) => {
         setActivePage(pageKey);
@@ -283,17 +314,22 @@ const AdminDashboard: React.FC = () => {
     
     const renderEditor = () => {
         if (activePage === 'Account') return null;
-        if (isLoading || !content) return <LoadingContainer>Đang tải dữ liệu {currentLang.toUpperCase()}...</LoadingContainer>;
 
+        if (activePage !== 'Gallery' && (isLoading || !content)) {
+            return <LoadingContainer>Đang tải dữ liệu {currentLang.toUpperCase()}...</LoadingContainer>;
+        }
+        
         const editorProps: AdminEditorProps = {
-            lang: currentLang, activeSection: activeInternalSection, content: content, updateContent,
-            handleSave, isLoading, status, setStatus, isRaw, setIsRaw, rawContent, setRawContent, syncImageAcrossLanguages
+            lang: currentLang, activeSection: activeInternalSection, content: content!, updateContent,
+            handleSave, isLoading, status, setStatus, isRaw, setIsRaw, rawContent, setRawContent,
+            syncImageAcrossLanguages
         };
 
         switch (activePage) {
             case 'Home': return <AdminHomepageEditor {...editorProps} />;
             case 'About': return <AdminAboutEditor {...editorProps} />;
             case 'Services': return <AdminServicesEditor {...editorProps} />;
+            case 'Gallery': return <AdminGalleryEditor />;
             default: return (
                 <div style={{padding: '20px', backgroundColor: '#fff', boxShadow: '0 2px 10px rgba(0,0,0,0.05)', borderRadius: '8px'}}>
                     <h2 style={{color: '#333'}}>Chào mừng đến với Trang Quản trị</h2>
@@ -329,13 +365,15 @@ const AdminDashboard: React.FC = () => {
             <MainContentArea>
                 <AdminHeader>
                     <HeaderControls>
-                        <div style={{ display: 'flex', gap: '10px' }}>
-                            {languages.map((langCode) => (
-                                <LanguageButton key={langCode} $isActive={currentLang === langCode} onClick={() => setCurrentLang(langCode)}>
-                                    {langCode.toUpperCase()}
-                                </LanguageButton>
-                            ))}
-                        </div>
+                        {(activePage !== 'Gallery' && activePage !== 'Account') && (
+                            <div style={{ display: 'flex', gap: '10px' }}>
+                                {languages.map((langCode) => (
+                                    <LanguageButton key={langCode} $isActive={currentLang === langCode} onClick={() => setCurrentLang(langCode)}>
+                                        {langCode.toUpperCase()}
+                                    </LanguageButton>
+                                ))}
+                            </div>
+                        )}
                         <LogoutButton onClick={handleLogout}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                             <span>Đăng Xuất</span>

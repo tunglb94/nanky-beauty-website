@@ -1,0 +1,70 @@
+// Import biến số và mixin
+@use 'variables' as *;
+@use 'mixins' as *; 
+
+/* RESET VÀ THIẾT LẬP CHUNG */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-body;
+    color: $color-dark-text; 
+    background-color: $color-white;
+    line-height: 1.6;
+    overflow-x: hidden; // Rất quan trọng cho animation
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $color-dark-text; 
+}
+
+a {
+    text-decoration: none;
+    color: $color-dark-text; 
+    transition: color $transition-speed;
+
+    &:hover {
+        /* ĐÃ SỬA: Sử dụng $color-primary-accent (Vàng Đồng đậm) */
+        color: $color-primary-accent; 
+    }
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all $transition-speed;
+}
+
+/* HIỆU ỨNG TƯƠNG TÁC CHUNG - GẠCH DƯỚI NAV */
+.nav-link {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: $color-primary-light; // Vàng sáng
+        transition: width $transition-speed $cubic-bezier-smooth;
+    }
+
+    &:hover::after {
+        width: 100%; // Hiệu ứng gạch dưới chạy từ giữa ra hai bên
+    }
+}

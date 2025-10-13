@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Khu vực không cho phép bot truy cập
+Disallow: /admin/
+Disallow: /api/
+
+# Đường dẫn đến sitemap
+Sitemap: https://yourdomain.com/sitemap.xml

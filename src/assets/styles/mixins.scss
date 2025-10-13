@@ -1,0 +1,19 @@
+// File này dùng để lưu trữ các đoạn code CSS/SCSS phức tạp có thể tái sử dụng
+// Ví dụ: Hiệu ứng Box Shadow Sang Trọng
+@mixin shadow-gold-glow {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 10px rgba($color-gold-dark, 0.2);
+    transition: box-shadow $transition-speed;
+
+    &:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba($color-gold-light, 0.4);
+    }
+}
+
+// Ví dụ: Thiết lập Parallax/Fixed Background
+@mixin background-parallax($image-url) {
+    background-image: url($image-url);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; // Tạo hiệu ứng Parallax cổ điển (dùng thay thế Framer Motion nếu cần)
+    min-height: 100vh;
+}

@@ -1,0 +1,45 @@
+//================================
+// 1. COLORS - TRẮNG/VÀNG ĐỒNG (Light Theme)
+//================================
+
+// Primary (Vàng Đồng - Gold Accent)
+$color-primary-accent: #C6A500;    // Vàng Đồng đậm
+$color-primary-light: #FFD700;     // Vàng rực sáng (cho gradient/hover)
+
+// Neutrals (Trung tính)
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-dark-background: #1a1a1a; // Màu nền tối cho Footer/CTA cuối
+$color-light-background: #F9F9F9; // Màu nền sáng chủ đạo
+$color-dark-text: #222222;       // Chữ đen/xám đậm trên nền sáng
+$color-medium-gray: #555555;     // Text phụ
+$color-light-gray: #CCCCCC;      // Viền/Divider
+$color-border-light: #EEEEEE;    // Viền nhẹ
+
+//================================
+// 2. LAYOUT & Z-INDEX
+//================================
+$header-height-desktop: 80px;
+$z-index-header: 1000;
+$z-index-modal: 2000;
+
+//================================
+// 3. FONT FAMILY
+//================================
+// Đã thống nhất font Sans-serif Inter
+$font-heading: 'Inter', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+//================================
+// 4. TRANSITION & ANIMATION
+//================================
+$transition-speed: 0.3s;
+$cubic-bezier-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+//================================
+// 5. BREAKPOINTS (Mobile First)
+//================================
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large-desktop: 1440px;

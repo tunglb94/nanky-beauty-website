@@ -1,0 +1,175 @@
+{
+  "header": {
+    "home": "首页",
+    "services": "美睫服务",
+    "gallery": "作品集",
+    "about": "关于我们",
+    "contact": "联系方式",
+    "cta_book": "立即预约"
+  },
+  "global_seo": {
+    "site_name": "Nanky Beauty - 胡志明市第二郡美睫",
+    "title_separator": "|",
+    "default_og_image": "/images/social/default-sharing-image.jpg"
+  },
+  "hero": {
+    "title": "NANKY BEAUTY 第二郡",
+    "subtitle": "位于胡志明市第二郡草田区的国际标准高端美睫艺术。采用领先技术和大师级手法。",
+    "cta_explore": "探索美睫服务",
+    "backgroundUrl": "/images/uploads/nrvgsfdgzknvcr4cry3dxk3o8.jpg",
+    "seo": {
+      "title": "第二郡最佳美睫 - 草田区 | Nanky Beauty",
+      "description": "Nanky Beauty 是位于胡志明市第二郡草田区的专业美睫沙龙。我们提供高品质的浓密、经典和混合款式美睫服务。安全、美观、价格实惠。",
+      "keywords": "第二郡美睫, 草田区美睫, 胡志明市嫁接睫毛, 第二郡最好的睫毛, 第二郡便宜的美睫, 胡志明市高端美睫, nanky beauty, 附近的美睫店"
+    }
+  },
+  "why_us": {
+    "title": "为什么在第二郡选择 Nanky Beauty",
+    "subtitle": "我们在草田区的服务质量由我们的专家团队和世界一流的材料保证。",
+    "cards": [
+      {
+        "icon": "certificate",
+        "title": "国际大师级技术",
+        "description": "我们的技师经过充分认证和广泛培训。Nanky Beauty 第二郡的许多大师拥有 7-10 年经验和国际海外培训经历。",
+        "imageUrl": "/images/uploads/mj6xihboav8zbva6eqcnfbio3.jpg"
+      },
+      {
+        "icon": "safety",
+        "title": "高级安全产品",
+        "description": "我们只使用 100% 进口的高级产品。韩国粘合剂的保持力是普通胶水的 3 倍。独家超柔软、超轻的睫毛材料。",
+        "imageUrl": "/images/uploads/dhlvro7syif9bahndkg9jpd98.jpg"
+      },
+      {
+        "icon": "clean",
+        "title": "医疗级消毒流程",
+        "description": "环境和工具经过彻底消毒，确保您在胡志明市获得放松且健康的眼部体验。",
+        "imageUrl": "/images/uploads/e5cszlejorprcn1bp04bmvqh0.jpg"
+      }
+    ]
+  },
+  "materials": {
+    "title": "采用优质进口材料创造的杰作",
+    "description": "Nanky Beauty 第二郡仅选择全球睫毛大师信赖的最高质量用品，确保最大的耐用性、安全性和美观性。",
+    "sections": [
+      {
+        "name": "睫毛 (Lashes)",
+        "subtitle": "提供超轻、自然的感觉和出色的保持力。",
+        "brands": [
+          { "name": "Nanky Beauty 睫毛", "country": "(独家)", "detail": "羽毛、水貂、兔毛、婴儿睫毛 – 独家、超柔软、超轻。", "logoUrl": "/images/logos/nanky-exclusive.png", "homepageUrl": "#" },
+          { "name": "Lash Box LA", "country": "(美国)", "detail": "世界顶级品牌, 超细材料, 完美的开花。", "logoUrl": "/images/logos/lashboxla.png", "homepageUrl": "https://www.lashboxla.com" },
+          { "name": "London Lash Pro", "country": "(英国)", "detail": "深黑色, 完美的卷曲度, 深受欧洲市场信赖。", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" },
+          { "name": "NAGARAKU", "country": "(韩国)", "detail": "在越南流行, 质量稳定, 价格合理。", "logoUrl": "/images/logos/nagarauku.png", "homepageUrl": "https://nagaraku.com" },
+          { "name": "Matsukaze / Nichiban", "country": "(日本)", "detail": "奢华系列, 提供极其自然, 精致的外观。", "logoUrl": "/images/logos/matsukaze.png", "homepageUrl": "https://www.matsukaze.co.jp" }
+        ]
+      },
+      {
+        "name": "粘合剂 (Adhesives)",
+        "subtitle": "保证 3 倍的耐久性, 快速干燥, 非常适合胡志明市的潮湿气候。",
+        "brands": [
+          { "name": "BL Lash Ultra Plus", "country": "(韩国)", "detail": "热门选择, 保持力好, 性能稳定。", "logoUrl": "/images/logos/bllash.png", "homepageUrl": "https://bllashes.com" },
+          { "name": "Sky Glue S+", "country": "(韩国)", "detail": "超快干燥（1秒）, 强力粘合, 适合大师使用。", "logoUrl": "/images/logos/skyglue.png", "homepageUrl": "https://www.skyglue.net" },
+          { "name": "Lash Makers Elite/Queen", "country": "(美国)", "detail": "顶级优质系列, 出色的湿度控制, 大师认可。", "logoUrl": "/images/logos/lashmakers.png", "homepageUrl": "https://lashmakers.com" },
+          { "name": "London Lash Pro", "country": "(英国)", "detail": "Power Bond / Crystal Bond – 在高湿度下表现出色。", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" }
+        ]
+      },
+      {
+        "name": "镊子与配件",
+        "subtitle": "精密仪器, 防静电, 支持技师创造完美的开花。",
+        "brands": [
+          { "name": "Brilliant Beauty", "country": "(美国)", "detail": "高精度, 完美平衡。", "logoUrl": "/images/logos/brilliant.png", "homepageUrl": "https://brilliant-beauty.co" },
+          { "name": "Vetus", "country": "(瑞士)", "detail": "高档材料, 卓越的耐用性。", "logoUrl": "/images/logos/vetus.png", "homepageUrl": "https://www.vetus.com" },
+          { "name": "EBL Lashes", "country": "(美国)", "detail": "超轻, 抗静电设计。", "logoUrl": "/images/logos/ebl.png", "homepageUrl": "https://ebllashes.com" },
+          { "name": "卸除剂和底漆", "country": "(专业)", "detail": "安全的卸除溶液和延长睫毛寿命的准备。", "logoUrl": "/images/logos/prep.png", "homepageUrl": "#" }
+        ]
+      }
+    ]
+  },
+  "cta_final": {
+    "title": "准备好拥有迷人的双眸了吗？",
+    "subtitle": "立即在第二郡预约即可享受 30% 折扣 - 您可以选择您的主技师。两人同行可额外享受 10% 折扣！",
+    "button": "在第二郡预约美睫"
+  },
+  "footer": {
+    "business_reg_dept": "守德市经济-计划与投资部",
+    "hkd_name": "Nanky Beauty 商业个体户",
+    "hkd_code": "HKD 代码: 8446086880-001",
+    "reg_code": "HKD 注册代码: 41Y8025160",
+    "address": "地址: 71 Vanh Dai Tay, An Khanh Ward, 第二郡, 胡志明市 (草田区).",
+    "hotline": "美睫热线: 0852.759.678",
+    "hours_title": "营业时间",
+    "hours": "上午 8:00 - 晚上 9:00",
+    "days": "周一至周日",
+    "parking": "可停车",
+    "social_title": "联系我们",
+    "location_title": "我们在第二郡的美睫沙龙",
+    "contact_title": "联系方式",
+    "legal_title": "法律信息",
+    "copyright_design": "设计: Nanky.",
+    "social_links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/nanky.beaute/", "icon": "f" },
+      { "name": "Instagram", "url": "https://www.instagram.com/nanky.beauty/", "icon": "📸" },
+      { "name": "Zalo", "url": "https://zalo.me/0852759678", "icon": "Z" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@nanky.beaute", "icon": "🎵" }
+    ]
+  },
+  "testimonials_title": "客户对 Nanky Beauty 的评价",
+  "review_1_quote": "在 Nanky Beauty 第二郡的体验超出了我的预期！技师非常细致，效果令人惊艳，而且保持时间很长。", "review_1_name": "Tran Mai A", "review_1_imageUrl": "/images/reviews/review-1.jpg",
+  "review_2_quote": "草田区的空间豪华且绝对放松。这是我在胡志明市唯一信任托付双眼的地方。", "review_2_name": "Nguyen Thi B", "review_2_imageUrl": "/images/reviews/review-2.jpg",
+  "review_3_quote": "我尝试过第二郡的很多美睫沙龙，但 Nanky 的个性化、高水平睫毛设计风格是最好的。我的眼睛彻底改变了！", "review_3_name": "Le Van C", "review_3_imageUrl": "/images/reviews/review-3.jpg",
+  "review_4_quote": "超柔软的羽毛睫毛非常轻盈；我几乎感觉不到它们的存在。真正的高端美睫体验。", "review_4_name": "Pham Thu D", "review_4_imageUrl": "/images/reviews/review-4.jpg",
+  "review_5_quote": "大师的技术非常专业；整个过程中我没有任何刺痛或不适。草田区最好的美睫服务。", "review_5_name": "Vu Hai E", "review_5_imageUrl": "/images/reviews/review-5.jpg",
+  "review_6_quote": "韩国胶水的粘合力非常好；我的睫毛比其他地方保持时间长一倍。物超所值。", "review_6_name": "Hoang Minh F", "review_6_imageUrl": "/images/reviews/review-6.jpg",
+
+  "service_0_title": "自然经典款美睫", "service_0_desc": "打造优雅、最自然美感的完美选择。适合第二郡顾客的日常款式。", "service_0_imageUrl": "/images/uploads/xf59vbcqj97gcu6lhwfeuetac.jpg", "service_0_price": "450,000 VND",
+  "service_1_title": "高端 3D/5D 浓密款美睫", "service_1_desc": "创造出令人印象深刻的厚度，带来迷人而犀利的眼神。我们在草田区最受欢迎的浓密美睫服务。", "service_1_imageUrl": "/images/uploads/ar4xbsyj337u6gd4j2big4hub.jpg", "service_1_price": "600,000 VND",
+  "service_2_title": "独家混合设计款美睫", "service_2_desc": "经典与浓密结合，根据您的眼形定制设计。只有在 Nanky Beauty 第二郡才有的独特风格。", "service_2_imageUrl": "/images/uploads/zdapefz7ej52dx2on86rradnn.jpg", "service_2_price": "800,000 VND",
+  "service_3_title": "专业补睫/卸除", "service_3_desc": "专业的补睫和卸除流程，确保您的自然睫毛和眼部健康的绝对安全。", "service_3_imageUrl": "/images/uploads/jy53ug6qndan1jvruofvt0j74.jpg", "service_3_price": "联系询价",
+  
+  "gallery_teaser_image_0": "/images/gallery/mi-volume.jpg",
+  "gallery_teaser_image_1": "/images/gallery/mi-classic.jpg",
+  "gallery_teaser_image_2": "/images/gallery/mi-hybrid.jpg",
+  "gallery_teaser_image_3": "/images/gallery/mi-style.jpg",
+  
+  "about_page": {
+    "hero_subtitle": "以极致美睫技术升华的艺术性。",
+    "hero_image_url": "/images/uploads/shsfoo79g7zu8gpwx6yj6ilvb.jpg",
+    "philosophy_title": "源于第二郡勤奋技术的美丽",
+    "philosophy_text": "在 Nanky Beauty 草田区，我们相信，眼睛的美丽必须伴随着绝对的安全和技术。这就是我们在每一项美睫服务中从不妥协质量的原因。",
+    "philosophy_image_url": "/images/uploads/znol752tykp1j7vr3a8rq2wxy.jpg",
+    "mission": "提升您的双眸，不仅是美观，还有在第二郡嫁接睫毛时的绝对安全和最放松的体验。",
+    "vision": "成为胡志明市最受欢迎的高端美睫品牌，引领专业精神和技术创新，为客户提供最大的自信。",
+    "pillars_section_title": "卓越美睫的 3 要素",
+    "pillars_section_subtitle": "Nanky Beauty 致力于通过人、产品和流程的完美结合，提供终极美睫体验。",
+    "pillars": "[{\"title\":\"国际大师级技术\",\"description\":\"我们的技师经过充分认证和广泛培训。许多大师拥有 7-10 年经验和国际海外培训经历，确保完美的个性化睫毛设计。\",\"milestones\":[\"7年以上经验\",\"欧洲认证\",\"韩国/美国培训\"],\"image\":\"/images/uploads/fgz3qyn52of4ucuw4j9l0xy81.jpg\"},{\"title\":\"高级安全产品\",\"description\":\"100% 进口材料（韩国、美国、英国）。韩国粘合剂提供 3 倍保持力，独家超柔软睫毛材料，无刺激性。安全是绝对的优先事项。\",\"milestones\":[\"粘合剂: BL Lash/Sky Glue\",\"睫毛: 羽毛/水貂\",\"不含甲醛\"],\"image\":\"/images/uploads/ekaiic47rlp23vaana8lv828r.jpg\"},{\"title\":\"极致消毒流程\",\"description\":\"确保环境和工具绝对无菌，使用医疗级消毒设备。在豪华空间中享受完整的美容和休息体验。\",\"milestones\":[\"紫外线消毒工具\",\"五星级环境\",\"一次性使用\"],\"image\":\"/images/uploads/udv53qi35uczrz5g8rbthzoqt.jpg\"}]",
+    "timeline_title": "NANKY BEAUTY 的旅程",
+    "timeline": "[{\"year\":\"2015\",\"event\":\"Nanky Beauty 在胡志明市开始其职业生涯，学习第一批技术。\",\"icon\":\"star\"},{\"year\":\"2018\",\"event\":\"Nanky Beauty 完成了在韩国首尔的专业培训（浓密/超浓密）。\",\"icon\":\"diploma\"},{\"year\":\"2020\",\"event\":\"成立 Nanky Beauty，以大师级标准为宗旨，专注于优质用品。\",\"icon\":\"flag\"},{\"year\":\"2023\",\"event\":\"Nanky Beauty 完成了 10,000 多套睫毛，并将技师培训扩展到国际标准。\",\"icon\":\"growth\"},{\"year\":\"2025\",\"event\":\"Nanky Beauty 在胡志明市第二郡开设了新的极致美容空间，并扩大了国际大师级培训服务。\",\"icon\":\"current\"}]",
+    "cta_about_title": "准备好在草田区体验高端美睫服务了吗？",
+    "cta_about_button": "立即预约",
+    "seo": {
+      "title": "关于 Nanky Beauty - 草田区, 第二郡值得信赖的美睫沙龙",
+      "description": "了解 Nanky Beauty 的旅程、理念和大师团队。我们致力于在胡志明市第二郡提供勤奋的技术、安全的产品和极致的消毒流程。",
+      "keywords": "关于nanky beauty, 第二郡专业美睫师, nanky beauty的故事, 草田区美睫理念"
+    }
+  },
+  "services_page": {
+    "title": "第二郡所有高端美睫服务",
+    "seo": {
+      "title": "胡志明市第二郡美睫价格表",
+      "description": "探索 Nanky Beauty 第二郡所有高端美睫服务的价格表：经典款、浓密款、混合设计款等。立即预约美丽、实惠、值得信赖的美睫。",
+      "keywords": "第二郡美睫价格表, 草田区美睫服务, 浓密款睫毛价格, 经典款睫毛费用"
+    }
+  },
+  "contact_page": {
+    "title": "在第二郡联系与预约美睫",
+    "cta_header": "通过以下方式快速联系",
+    "zalo": "联系 Zalo",
+    "messenger": "发送 Messenger 消息",
+    "whatsapp": "联系 WhatsApp",
+    "instagram_chat": "Instagram 私信",
+    "seo": {
+      "title": "在草田区, 第二郡联系与预约美睫",
+      "description": "通过热线或 Zalo 联系 Nanky Beauty，以最快的方式在胡志明市第二郡草田区进行美睫咨询和预约。提供停车位。",
+      "keywords": "联系nanky beauty, 第二郡预约美睫, 草田区nanky beauty电话"
+    }
+  }
+}

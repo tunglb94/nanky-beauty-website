@@ -1,0 +1,175 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ nối mi",
+    "gallery": "Bộ sưu tập",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ",
+    "cta_book": "Đặt lịch ngay"
+  },
+  "global_seo": {
+    "site_name": "Nanky Beauty - Nối Mi Quận 2, TP.HCM",
+    "title_separator": "|",
+    "default_og_image": "/images/social/default-sharing-image.jpg"
+  },
+  "hero": {
+    "title": "NANKY BEAUTY QUẬN 2",
+    "subtitle": "Nghệ thuật nối mi cao cấp chuẩn quốc tế tại Thảo Điền, Quận 2, TP. HCM. Kỹ thuật hàng đầu, an toàn và uy tín.",
+    "cta_explore": "Khám phá các dịch vụ nối mi",
+    "backgroundUrl": "/images/uploads/nrvgsfdgzknvcr4cry3dxk3o8.jpg",
+    "seo": {
+      "title": "Nối Mi Đẹp Quận 2 - Nối Mi Thảo Điền Uy Tín | Nanky Beauty",
+      "description": "Nanky Beauty là địa chỉ nối mi chuyên nghiệp tại Quận 2, Thảo Điền, TP. HCM. Cung cấp các dịch vụ nối mi volume, classic, mi thiết kế cao cấp, an toàn, bền đẹp với mức giá hợp lý.",
+      "keywords": "nối mi quận 2, nối mi thảo điền, nối mi tphcm, nối mi đẹp quận 2, nối mi giá rẻ quận 2, nối mi cao cấp tphcm, nanky beauty, tiệm nối mi gần đây"
+    }
+  },
+  "why_us": {
+    "title": "Vì Sao Chọn Nối Mi Tại Nanky Beauty Quận 2",
+    "subtitle": "Chất lượng dịch vụ nối mi tại Thảo Điền được đảm bảo bởi đội ngũ Master và nguyên liệu cao cấp hàng đầu thế giới.",
+    "cards": [
+      {
+        "icon": "certificate",
+        "title": "Kỹ Thuật Nối Mi Master Quốc Tế",
+        "description": "KTV được đào tạo bài bản, có đầy đủ chứng chỉ. Nhiều Master tại Nanky Beauty Quận 2 được tu nghiệp ở nước ngoài, sở hữu 7-10 năm kinh nghiệm trong nghề.",
+        "imageUrl": "/images/uploads/mj6xihboav8zbva6eqcnfbio3.jpg"
+      },
+      {
+        "icon": "safety",
+        "title": "Sản Phẩm Cao Cấp & An Toàn",
+        "description": "Chỉ sử dụng các sản phẩm nối mi cao cấp, an toàn tuyệt đối. Keo Hàn Quốc nhập khẩu giúp mi bền hơn x3 lần. Chất mi độc quyền siêu mềm, siêu nhẹ.",
+        "imageUrl": "/images/uploads/dhlvro7syif9bahndkg9jpd98.jpg"
+      },
+      {
+        "icon": "clean",
+        "title": "Quy Trình Vô Trùng Chuẩn Y Khoa",
+        "description": "Đảm bảo môi trường và dụng cụ được vô trùng tuyệt đối, mang lại trải nghiệm nối mi thư giãn và bảo vệ sức khỏe cho đôi mắt của bạn tại TP. HCM.",
+        "imageUrl": "/images/uploads/e5cszlejorprcn1bp04bmvqh0.jpg"
+      }
+    ]
+  },
+  "materials": {
+    "title": "Tuyệt Tác Nối Mi Từ Nguyên Liệu Nhập Khẩu Cao Cấp",
+    "description": "Nanky Beauty Quận 2 chỉ lựa chọn các thương hiệu vật tư cao cấp nhất, được các Master trên toàn thế giới tin dùng, đảm bảo độ bền, an toàn và thẩm mỹ tối đa cho từng bộ mi.",
+    "sections": [
+      {
+        "name": "Sợi mi (Lashes)",
+        "subtitle": "Mang lại cảm giác siêu nhẹ, tự nhiên và độ bền vượt trội.",
+        "brands": [
+          { "name": "Mi Nanky Beauty", "country": "(Độc quyền)", "detail": "Lông Vũ, Lông Chồn, Lông Thỏ, Mi Em Bé – Độc quyền, siêu mềm, siêu nhẹ.", "logoUrl": "/images/logos/nanky-exclusive.png", "homepageUrl": "#" },
+          { "name": "Lash Box LA", "country": "(Mỹ)", "detail": "Top thế giới, chất mi siêu mịn, tạo fan đẹp, chuyên nghiệp.", "logoUrl": "/images/logos/lashboxla.png", "homepageUrl": "https://www.lashboxla.com" },
+          { "name": "London Lash Pro", "country": "(Anh)", "detail": "Mi đen bóng, chuẩn form, được tin dùng tại thị trường Âu Châu.", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" },
+          { "name": "NAGARAKU", "country": "(Hàn Quốc)", "detail": "Phổ biến tại Việt Nam, chất lượng ổn định, giá thành hợp lý.", "logoUrl": "/images/logos/nagarauku.png", "homepageUrl": "https://nagaraku.com" },
+          { "name": "Matsukaze / Nichiban", "country": "(Nhật)", "detail": "Dòng Luxury, mang lại vẻ đẹp cực kỳ tự nhiên, tinh tế.", "logoUrl": "/images/logos/matsukaze.png", "homepageUrl": "https://www.matsukaze.co.jp" }
+        ]
+      },
+      {
+        "name": "Keo (Adhesives)",
+        "subtitle": "Đảm bảo độ bám dính x3 lần, khô nhanh và phù hợp với khí hậu nóng ẩm tại TP. HCM.",
+        "brands": [
+          { "name": "BL Lash Ultra Plus", "country": "(Hàn Quốc)", "detail": "Phổ biến, bám dính tốt, độ ổn định cao.", "logoUrl": "/images/logos/bllash.png", "homepageUrl": "https://bllashes.com" },
+          { "name": "Sky Glue S+", "country": "(Hàn Quốc)", "detail": "Khô siêu nhanh (1s), dính mạnh, chuyên nghiệp cho thợ Master.", "logoUrl": "/images/logos/skyglue.png", "homepageUrl": "https://www.skyglue.net" },
+          { "name": "Lash Makers Elite/Queen", "country": "(Mỹ)", "detail": "Dòng cao cấp nhất, kiểm soát độ ẩm tốt, dành cho thợ có tay nghề.", "logoUrl": "/images/logos/lashmakers.png", "homepageUrl": "https://lashmakers.com" },
+          { "name": "London Lash Pro", "country": "(Anh)", "detail": "Power Bond / Crystal Bond – Kiểm soát tốt trong điều kiện độ ẩm cao.", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" }
+        ]
+      },
+      {
+        "name": "Nhíp & Phụ kiện",
+        "subtitle": "Dụng cụ chuẩn xác tuyệt đối, chống tĩnh điện, hỗ trợ KTV tạo fan hoàn hảo.",
+        "brands": [
+          { "name": "Brilliant Beauty", "country": "(Mỹ)", "detail": "Độ chính xác cao, cân bằng hoàn hảo.", "logoUrl": "/images/logos/brilliant.png", "homepageUrl": "https://brilliant-beauty.co" },
+          { "name": "Vetus", "country": "(Thụy Sĩ)", "detail": "Chất liệu cao cấp, độ bền vượt trội.", "logoUrl": "/images/logos/vetus.png", "homepageUrl": "https://www.vetus.com" },
+          { "name": "EBL Lashes", "country": "(Mỹ)", "detail": "Siêu nhẹ, thiết kế chống tĩnh điện.", "logoUrl": "/images/logos/ebl.png", "homepageUrl": "https://ebllashes.com" },
+          { "name": "Remover & Primer", "country": "(Chuyên dụng)", "detail": "Giải pháp tháo mi an toàn, không kích ứng và tăng độ bền cho mi.", "logoUrl": "/images/logos/prep.png", "homepageUrl": "#" }
+        ]
+      }
+    ]
+  },
+  "cta_final": {
+    "title": "Sẵn sàng sở hữu đôi mắt cuốn hút?",
+    "subtitle": "Đặt lịch nối mi tại Quận 2 ngay để nhận ưu đãi giảm giá 30% - Có thể tùy chọn KTV thực hiện. Ưu đãi đi 2 khách giảm thêm 10%!",
+    "button": "ĐẶT LỊCH NỐI MI TẠI QUẬN 2"
+  },
+  "footer": {
+    "business_reg_dept": "Phòng Kinh Tế - Kế hoạch và đầu tư TP. Thủ Đức",
+    "hkd_name": "Hộ kinh doanh Nanky Beauty",
+    "hkd_code": "Mã số HKD : 8446086880-001",
+    "reg_code": "Mã số đăng ký HKD: 41Y8025160",
+    "address": "Địa chỉ: 71 Vành Đai Tây, Phường An Khánh, Quận 2, TP. HCM (Khu Thảo Điền).",
+    "hotline": "Hotline Nối Mi: 0852.759.678",
+    "hours_title": "Giờ Hoạt Động",
+    "hours": "8:00AM - 21:00PM",
+    "days": "Thứ 2 tới Chủ nhật",
+    "parking": "Có chỗ đậu xe oto",
+    "social_title": "Kết Nối Với Chúng Tôi",
+    "location_title": "Địa Chỉ Nối Mi Tại Quận 2",
+    "contact_title": "Liên Hệ",
+    "legal_title": "Thông Tin Pháp Lý",
+    "copyright_design": "Thiết kế bởi Nanky.",
+    "social_links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/nanky.beaute/", "icon": "f" },
+      { "name": "Instagram", "url": "https://www.instagram.com/nanky.beauty/", "icon": "📸" },
+      { "name": "Zalo", "url": "https://zalo.me/0852759678", "icon": "Z" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@nanky.beaute", "icon": "🎵" }
+    ]
+  },
+  "testimonials_title": "Khách Hàng Nói Gì Về Nối Mi Tại Nanky Beauty",
+  "review_1_quote": "Trải nghiệm nối mi tại Nanky Beauty Quận 2 vượt ngoài mong đợi! Kỹ thuật viên tỉ mỉ và kết quả siêu đẹp, giữ được rất lâu.", "review_1_name": "Trần Mai A", "review_1_imageUrl": "/images/reviews/review-1.jpg",
+  "review_2_quote": "Không gian tại Thảo Điền sang trọng và thư giãn tuyệt đối. Đây là nơi duy nhất tôi tin tưởng để nối mi tại TP. HCM.", "review_2_name": "Nguyễn Thị B", "review_2_imageUrl": "/images/reviews/review-2.jpg",
+  "review_3_quote": "Tôi đã thử nhiều tiệm nối mi ở Quận 2, nhưng Nanky có phong cách thiết kế mi cá nhân hóa đỉnh cao nhất. Đôi mắt thay đổi hoàn toàn!", "review_3_name": "Lê Văn C", "review_3_imageUrl": "/images/reviews/review-3.jpg",
+  "review_4_quote": "Chất mi Lông Vũ siêu mềm và nhẹ, tôi gần như không cảm thấy đang nối mi. Một địa chỉ nối mi cao cấp rất đáng tiền.", "review_4_name": "Phạm Thu D", "review_4_imageUrl": "/images/reviews/review-4.jpg",
+  "review_5_quote": "Kỹ thuật của Master rất chuyên nghiệp, không bị cay mắt hay khó chịu chút nào. Dịch vụ nối mi tốt nhất Thảo Điền.", "review_5_name": "Vũ Hải E", "review_5_imageUrl": "/images/reviews/review-5.jpg",
+  "review_6_quote": "Keo Hàn Quốc bám cực chắc, bộ mi của tôi bền gấp đôi so với các nơi khác. Nối mi giá rẻ mà chất lượng cao cấp là có thật.", "review_6_name": "Hoàng Minh F", "review_6_imageUrl": "/images/reviews/review-6.jpg",
+
+  "service_0_title": "Nối Mi Classic Tự Nhiên", "service_0_desc": "Lựa chọn hoàn hảo cho vẻ đẹp tinh tế, tự nhiên. Phù hợp cho khách hàng tại Quận 2 muốn có một bộ mi đẹp, nhẹ nhàng.", "service_0_imageUrl": "/images/uploads/xf59vbcqj97gcu6lhwfeuetac.jpg", "service_0_price": "450.000 VNĐ",
+  "service_1_title": "Nối Mi Volume 3D/5D Cao Cấp", "service_1_desc": "Tạo độ dày ấn tượng, mang lại ánh nhìn cuốn hút. Dịch vụ nối mi volume được yêu thích nhất tại Thảo Điền, TP.HCM.", "service_1_imageUrl": "/images/uploads/ar4xbsyj337u6gd4j2big4hub.jpg", "service_1_price": "600.000 VNĐ",
+  "service_2_title": "Nối Mi Thiết Kế Hybrid Độc Quyền", "service_2_desc": "Kết hợp giữa Classic và Volume, thiết kế riêng theo dáng mắt. Tạo phong cách nối mi độc đáo chỉ có tại Nanky Beauty Quận 2.", "service_2_imageUrl": "/images/uploads/zdapefz7ej52dx2on86rradnn.jpg", "service_2_price": "800.000 VNĐ",
+  "service_3_title": "Dặm/Tháo Mi Chuyên Nghiệp", "service_3_desc": "Quy trình dặm và tháo mi chuyên nghiệp, đảm bảo an toàn tuyệt đối cho mi thật và sức khỏe đôi mắt của bạn.", "service_3_imageUrl": "/images/uploads/jy53ug6qndan1jvruofvt0j74.jpg", "service_3_price": "Liên hệ",
+  
+  "gallery_teaser_image_0": "/images/gallery/mi-volume.jpg",
+  "gallery_teaser_image_1": "/images/gallery/mi-classic.jpg",
+  "gallery_teaser_image_2": "/images/gallery/mi-hybrid.jpg",
+  "gallery_teaser_image_3": "/images/gallery/mi-style.jpg",
+  
+  "about_page": {
+    "hero_subtitle": "Nghệ thuật thăng hoa từ kỹ thuật nối mi tuyệt đối.",
+    "hero_image_url": "/images/uploads/shsfoo79g7zu8gpwx6yj6ilvb.jpg",
+    "philosophy_title": "Vẻ Đẹp Đến Từ Kỹ Thuật Nối Mi Tận Tâm Tại Quận 2",
+    "philosophy_text": "Tại Nanky Beauty Thảo Điền, chúng tôi tin rằng, vẻ đẹp của đôi mắt phải đi kèm với sự an toàn và kỹ thuật tuyệt đối. Đó là lý do chúng tôi không bao giờ thỏa hiệp với chất lượng trong từng dịch vụ nối mi.",
+    "philosophy_image_url": "/images/uploads/znol752tykp1j7vr3a8rq2wxy.jpg",
+    "mission": "Nâng Tầm Đôi Mắt Của Bạn, không chỉ về mặt thẩm mỹ mà còn về sự an toàn tuyệt đối và trải nghiệm thư giãn tuyệt vời nhất khi nối mi tại Quận 2.",
+    "vision": "Trở thành thương hiệu nối mi cao cấp được yêu thích nhất tại TP. HCM, dẫn đầu về sự chuyên nghiệp và đổi mới kỹ thuật, mang lại sự tự tin tối đa cho khách hàng.",
+    "pillars_section_title": "3 YẾU TỐ LÀM NÊN ĐẲNG CẤP NỐI MI",
+    "pillars_section_subtitle": "Nanky Beauty cam kết mang lại trải nghiệm nối mi tối thượng thông qua sự kết hợp hoàn hảo giữa con người, sản phẩm và quy trình.",
+    "pillars": "[{\"title\":\"Kỹ thuật Master Quốc tế\",\"description\":\"KTV được đào tạo bài bản, có đầy đủ chứng chỉ. Nhiều Master được tu nghiệp ở nước ngoài, sở hữu 7-10 năm kinh nghiệm trong nghề, đảm bảo thiết kế mi cá nhân hóa hoàn hảo.\",\"milestones\":[\"7+ năm kinh nghiệm\",\"Chứng chỉ Châu Âu\",\"Tu nghiệp Hàn Quốc/Mỹ\"],\"image\":\"/images/uploads/fgz3qyn52of4ucuw4j9l0xy81.jpg\"},{\"title\":\"Sản phẩm Cao cấp & An toàn\",\"description\":\"100% vật liệu nhập khẩu (Hàn Quốc, Mỹ, Anh). Keo Hàn Quốc giúp mi bền x3, chất mi độc quyền siêu nhẹ, không gây kích ứng. An toàn là ưu tiên tuyệt đối.\",\"milestones\":[\"Keo: BL Lash/Sky Glue\",\"Mi: Lông Vũ/Lông Chồn\",\"Không formaldehyde\"],\"image\":\"/images/uploads/ekaiic47rlp23vaana8lv828r.jpg\"},{\"title\":\"Quy trình Vô trùng Tối thượng\",\"description\":\"Đảm bảo môi trường và dụng cụ được vô trùng tuyệt đối, sử dụng thiết bị khử khuẩn chuẩn y tế. Trải nghiệm làm đẹp và nghỉ ngơi trọn vẹn trong không gian sang trọng.\",\"milestones\":[\"Dụng cụ khử trùng UV\",\"Không gian 5 sao\",\"Sử dụng 1 lần\"],\"image\":\"/images/uploads/udv53qi35uczrz5g8rbthzoqt.jpg\"}]",
+    "timeline_title": "HÀNH TRÌNH CỦA NANKY BEAUTY",
+    "timeline": "[{\"year\":\"2015\",\"event\":\"Nanky Beauty bắt đầu sự nghiệp, học hỏi kỹ thuật đầu tiên tại TP. HCM.\",\"icon\":\"star\"},{\"year\":\"2018\",\"event\":\"Nanky Beauty hoàn thành khóa đào tạo chuyên sâu tại Seoul, Hàn Quốc (Volume/Mega Volume).\",\"icon\":\"diploma\"},{\"year\":\"2020\",\"event\":\"Thành lập Nanky Beauty với tiêu chí Master-level, tập trung vào vật tư cao cấp.\",\"icon\":\"flag\"},{\"year\":\"2023\",\"event\":\"Nanky Beauty đạt mốc 10.000+ bộ mi hoàn thành và mở rộng quy mô đào tạo KTV theo tiêu chuẩn quốc tế.\",\"icon\":\"growth\"},{\"year\":\"2025\",\"event\":\"Nanky Beauty ra mắt không gian làm đẹp Tối Thượng mới tại Quận 2, TP. HCM và mở rộng dịch vụ đào tạo Master quốc tế.\",\"icon\":\"current\"}]",
+    "cta_about_title": "Sẵn sàng trải nghiệm dịch vụ nối mi cao cấp tại Thảo Điền?",
+    "cta_about_button": "ĐẶT LỊCH NGAY",
+    "seo": {
+      "title": "Về Nanky Beauty - Địa Chỉ Nối Mi Uy Tín Tại Thảo Điền, Quận 2",
+      "description": "Tìm hiểu về hành trình, triết lý và đội ngũ Master tại Nanky Beauty. Cam kết kỹ thuật nối mi tận tâm, sản phẩm an toàn và quy trình vô trùng tuyệt đối tại Quận 2, TP.HCM.",
+      "keywords": "về nanky beauty, đội ngũ nối mi chuyên nghiệp quận 2, lịch sử nanky beauty, triết lý nối mi thảo điền"
+    }
+  },
+  "services_page": {
+    "title": "Tất Cả Dịch Vụ Nối Mi Cao Cấp Tại Quận 2",
+    "seo": {
+      "title": "Bảng Giá Nối Mi Mới Nhất tại Quận 2, TP.HCM",
+      "description": "Khám phá bảng giá các dịch vụ nối mi cao cấp tại Nanky Beauty Quận 2: mi Classic, mi Volume, mi Thiết kế Hybrid và hơn thế nữa. Đặt lịch nối mi đẹp, giá rẻ, uy tín ngay.",
+      "keywords": "bảng giá nối mi quận 2, dịch vụ nối mi thảo điền, nối mi volume giá bao nhiêu, nối mi classic giá rẻ"
+    }
+  },
+  "contact_page": {
+    "title": "Liên Hệ & Đặt Lịch Nối Mi tại Quận 2",
+    "cta_header": "Liên Hệ Nhanh Qua",
+    "zalo": "Liên hệ Zalo",
+    "messenger": "Gửi tin nhắn Messenger",
+    "whatsapp": "Liên hệ WhatsApp",
+    "instagram_chat": "Chat Instagram",
+    "seo": {
+      "title": "Liên Hệ & Đặt Lịch Nối Mi Tại Thảo Điền, Quận 2",
+      "description": "Liên hệ Nanky Beauty qua Hotline, Zalo để được tư vấn và đặt lịch nối mi nhanh nhất tại Thảo Điền, Quận 2, TP.HCM. Có chỗ đậu xe hơi, thuận tiện di chuyển.",
+      "keywords": "liên hệ nanky beauty, đặt lịch nối mi quận 2, số điện thoại nanky beauty thảo điền"
+    }
+  }
+}

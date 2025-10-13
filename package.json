@@ -1,0 +1,40 @@
+{
+  "name": "nanky-beauty-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "bcrypt": "^5.1.1",
+    "cookie": "^0.6.0",
+    "formidable": "^3.5.1",
+    "framer-motion": "^11.2.10",
+    "jose": "^5.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-intersection-observer": "^9.10.3",
+    "rate-limiter-flexible": "^5.0.3",
+    "styled-components": "^6.1.11"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie": "^0.6.0",
+    "@types/formidable": "^3.4.5",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "prisma": "^5.14.0",
+    "sass": "^1.77.6",
+    "typescript": "^5"
+  }
+}

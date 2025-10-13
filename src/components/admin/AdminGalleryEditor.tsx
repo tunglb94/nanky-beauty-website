@@ -218,6 +218,8 @@ const AdminGalleryEditor: React.FC = () => {
                             onUpdate={(newUrl) => handleUpdateProjectField(project.id, 'mainImage', newUrl)}
                             uploadSubdir="gallery"
                             uniqueId={`${project.id}-main`}
+                            setStatus={setStatus} // FIX: Thêm prop setStatus
+                            isLoading={isLoading} // FIX: Thêm prop isLoading
                         />
                         <InputGroup>
                             <label>Mô tả (thẻ alt)</label>
@@ -256,6 +258,8 @@ const AdminGalleryEditor: React.FC = () => {
                                         onUpdate={(newUrl) => handleUpdateAdditionalImage(project.id, index, newUrl)}
                                         uploadSubdir="gallery"
                                         uniqueId={`${project.id}-sub-${index}`}
+                                        setStatus={setStatus} // FIX: Thêm prop setStatus
+                                        isLoading={isLoading} // FIX: Thêm prop isLoading
                                     />
                                     <RemoveButton onClick={() => handleRemoveAdditionalImage(project.id, index)} style={{marginTop: '5px'}}>Xóa ảnh phụ này</RemoveButton>
                                 </SubImageWrapper>

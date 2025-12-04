@@ -1,17 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer'; 
-// *** ĐÃ THAY THẾ HÀM MOCK BẰNG IMPORT HOOK THỰC TẾ ***
-import { useI18n } from '../../hooks/useI18n'; 
-// ******************************************************
+import { useInView } from 'react-intersection-observer';
+import { useI18n } from '../../hooks/useI18n';
+import Image from 'next/image'; // Đã import Image
 
-
-// Dữ liệu giả (Chỉ dùng để xác định số lượng lặp)
-const SERVICE_DATA_KEYS = [0, 1, 2, 3]; 
-
+// Styled Components (Giữ nguyên, bao gồm sửa h3)
 const ServicesWrapper = styled.section`
-  /* *** NỀN TRẮNG TINH MỚI *** */
   padding: 100px 80px;
   background-color: #fff;
   text-align: center;
@@ -21,9 +16,9 @@ const ServicesWrapper = styled.section`
   }
 `;
 
-const SectionTitle = styled(motion.h2)`
+const SectionTitle = styled(motion.h2)` // Giữ là h2
   font-size: 3rem;
-  color: #222; /* Dark Text */
+  color: #222;
   margin-bottom: 80px;
   position: relative;
 
@@ -38,7 +33,6 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 
-  /* *** MOBILE OPTIMIZATION: 1 CỘT *** */
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     max-width: 500px;
@@ -51,8 +45,18 @@ const ServiceCard = styled(motion.div)`
   height: 400px;
   overflow: hidden;
   border-radius: 6px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  // Thêm transition cho scale của ảnh con khi hover
+  // transition: transform 0.5s ease; // Bỏ vì đặt trên Image
+
+  &:hover .service-card-image { // Target ảnh con qua class name
+      transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const CardContent = styled.div`
@@ -63,111 +67,101 @@ const CardContent = styled.div`
   padding: 30px;
   text-align: left;
   color: #fff;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%); 
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
   transition: background 0.3s ease;
-  z-index: 2;
+  z-index: 2; // Nổi trên ảnh
 `;
 
-const CardTitle = styled.h4`
+const CardTitle = styled.h3` // Đã là h3
   font-size: 1.8rem;
   margin-bottom: 5px;
   color: #fff;
+  line-height: 1.3;
+
+  .gold-overlay & { color: #fff; }
 `;
 
 const CardDescription = styled.p`
   font-size: 0.95rem;
   font-weight: 300;
-  color: #ccc; 
+  color: #ccc;
+  line-height: 1.5;
+
+  .gold-overlay & { color: #fff; margin-bottom: 10px; }
 `;
 
-// Hiệu ứng "Mask Reveal" - Lớp phủ Vàng Đồng
+const CardPrice = styled(motion.p)`
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-top: auto;
+`;
+
 const GoldOverlay = styled(motion.div)`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(198, 165, 0, 0.85); /* Vàng Đồng */
+  background-color: rgba(198, 165, 0, 0.85);
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  text-align: left;
+  color: #fff;
+  &.gold-overlay { }
 `;
 
-const CardImage = styled.div`
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-  
-  ${ServiceCard}:hover & {
-    transform: scale(1.1);
-  }
-`;
 
 const ServicesGrid: React.FC = () => {
-  const { t } = useI18n(); 
+  const { t } = useI18n();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1, 
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 } 
-    }
+  const getServiceKeys = () => { /* Giữ nguyên logic */
+    const keys = []; let i = 0; while (i < 100) { const titleKey = `service_${i}_title`; const title = t(titleKey); if (typeof title !== 'string' || title.startsWith('[MISSING TRANSLATION:')) { break; } keys.push(i); i++; } return keys;
   };
+  const serviceDataKeys = getServiceKeys();
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-  };
-  
-  // Biến thể cho hiệu ứng Mask Reveal
-  const overlayVariants = {
-      initial: { opacity: 0, y: "100%" },
-      hover: { opacity: 1, y: "0%", transition: { duration: 0.4, ease: "easeInOut" } }
-  };
+  const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } };
+  const cardVariants = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
+  const overlayVariants = { initial: { opacity: 0, y: "100%" }, hover: { opacity: 1, y: "0%", transition: { duration: 0.4, ease: "easeInOut" } } };
 
   return (
     <ServicesWrapper id="services" ref={ref}>
-      <SectionTitle
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-      >
+      <SectionTitle initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} >
         {t('header.services')}
       </SectionTitle>
-
-      <GridContainer 
-        as={motion.div}
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        {SERVICE_DATA_KEYS.map((index) => {
-          // *** LẤY DỮ LIỆU ĐỘNG TỪ JSON ***
+      <GridContainer as={motion.div} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} >
+        {serviceDataKeys.map((index) => {
           const imageUrl = t(`service_${index}_imageUrl`) || `/images/services/service-${index + 1}.jpg`;
           const title = t(`service_${index}_title`);
           const description = t(`service_${index}_desc`);
           const price = t(`service_${index}_price`);
-            
+
           return (
-            <ServiceCard 
-              key={index} 
-              variants={cardVariants}
-              initial="initial"
-              whileHover="hover"
-            >
-              {/* SỬ DỤNG imageUrl ĐỘNG */}
-              <CardImage style={{ backgroundImage: `url('${imageUrl}')` }} />
-              
-              <GoldOverlay variants={overlayVariants}>
-                  <CardContent style={{ background: 'none', color: '#fff' }}>
-                      <CardTitle style={{ color: '#fff' }}>{title}</CardTitle>
-                      <CardDescription style={{ color: '#fff' }}>{description}</CardDescription>
-                      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.3 } }}>
-                          {price}
-                      </motion.p>
-                  </CardContent>
+            <ServiceCard key={index} variants={cardVariants} initial="initial" whileHover="hover" >
+              {imageUrl && typeof imageUrl === 'string' && (
+                  // --- SỬA CÚ PHÁP IMAGE ---
+                  <Image
+                    src={imageUrl}
+                    alt={title || `Nanky Beauty Service ${index + 1}`}
+                    fill // Thay layout="fill"
+                    style={{ objectFit: 'cover', zIndex: 1, transition: 'transform 0.5s ease' }} // Thay objectFit bằng style
+                    quality={70}
+                    className="service-card-image"
+                    // === THÊM SIZES ===
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  // --- KẾT THÚC SỬA ---
+              )}
+              <GoldOverlay variants={overlayVariants} className="gold-overlay">
+                  <CardTitle>{title}</CardTitle>
+                  <CardDescription>{description}</CardDescription>
+                  <CardPrice initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.3 } }}>
+                      {price}
+                  </CardPrice>
               </GoldOverlay>
-              
               <CardContent>
                 <CardTitle>{title}</CardTitle>
                 <CardDescription>{description}</CardDescription>

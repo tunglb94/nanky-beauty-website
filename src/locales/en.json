@@ -16,11 +16,11 @@
     "title": "NANKY BEAUTY DISTRICT 2",
     "subtitle": "Premium eyelash extension artistry in Thao Dien, District 2, Ho Chi Minh City. Featuring leading technology and master techniques.",
     "cta_explore": "Explore Lash Services",
-    "backgroundUrl": "/images/uploads/nrvgsfdgzknvcr4cry3dxk3o8.jpg",
+    "backgroundUrl": "/images/uploads/hrhwocezzlphqfkak3lhzaekf.webp",
     "seo": {
-      "title": "Best Eyelash Extensions in District 2 - Thao Dien | Nanky Beauty",
-      "description": "Nanky Beauty is a professional eyelash extension salon in District 2, Thao Dien, HCMC. We offer high-quality volume, classic, and hybrid lash services. Safe, beautiful, and affordable.",
-      "keywords": "eyelash extensions district 2, eyelash extensions thao dien, lashes hcmc, best lashes district 2, affordable lashes district 2, premium lash extensions hcmc, nanky beauty, lash salon near me"
+      "title": "Eyelash Extensions Thao Dien, District 2 | Nanky Beauty | Lash Salon Near Me",
+      "description": "Looking for the 'best eyelash extensions near me' in HCMC? Nanky Beauty is the top-rated lash salon in Thao Dien, District 2 for premium volume, classic, and hybrid lashes. Safe, stunning, and professional.",
+      "keywords": "eyelash extensions district 2, eyelash extensions thao dien, eyelash extensions near me, best lash salon thao dien, nanky beauty, premium lashes district 2, hcmc lashes, volume lashes, classic lashes"
     }
   },
   "why_us": {
@@ -55,31 +55,109 @@
         "name": "Lashes",
         "subtitle": "Provides an ultra-light, natural feel and superior retention.",
         "brands": [
-          { "name": "Nanky Beauty Lashes", "country": "(Exclusive)", "detail": "Feather, Mink, Rabbit, Baby Lashes – Exclusive, ultra-soft, ultra-light.", "logoUrl": "/images/logos/nanky-exclusive.png", "homepageUrl": "#" },
-          { "name": "Lash Box LA", "country": "(USA)", "detail": "World's top brand, ultra-fine material, perfect fans.", "logoUrl": "/images/logos/lashboxla.png", "homepageUrl": "https://www.lashboxla.com" },
-          { "name": "London Lash Pro", "country": "(UK)", "detail": "Deep black, perfect curl, trusted in the European market.", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" },
-          { "name": "NAGARAKU", "country": "(Korea)", "detail": "Popular in Vietnam, stable quality, competitive price.", "logoUrl": "/images/logos/nagarauku.png", "homepageUrl": "https://nagaraku.com" },
-          { "name": "Matsukaze / Nichiban", "country": "(Japan)", "detail": "Luxury line, delivers an extremely natural, refined look.", "logoUrl": "/images/logos/matsukaze.png", "homepageUrl": "https://www.matsukaze.co.jp" }
+          {
+            "name": "Nanky Beauty Lashes",
+            "country": "(Exclusive)",
+            "detail": "Feather, Mink, Rabbit, Baby Lashes – Exclusive, ultra-soft, ultra-light.",
+            "logoUrl": "/images/logos/nanky-exclusive.png",
+            "homepageUrl": "#"
+          },
+          {
+            "name": "Lash Box LA",
+            "country": "(USA)",
+            "detail": "World's top brand, ultra-fine material, perfect fans.",
+            "logoUrl": "/images/logos/lashboxla.png",
+            "homepageUrl": "https://www.lashboxla.com"
+          },
+          {
+            "name": "London Lash Pro",
+            "country": "(UK)",
+            "detail": "Deep black, perfect curl, trusted in the European market.",
+            "logoUrl": "/images/logos/londonlashpro.png",
+            "homepageUrl": "https://www.londonlashpro.com"
+          },
+          {
+            "name": "NAGARAKU",
+            "country": "(Korea)",
+            "detail": "Popular in Vietnam, stable quality, competitive price.",
+            "logoUrl": "/images/logos/nagarauku.png",
+            "homepageUrl": "https://nagaraku.com"
+          },
+          {
+            "name": "Matsukaze / Nichiban",
+            "country": "(Japan)",
+            "detail": "Luxury line, delivers an extremely natural, refined look.",
+            "logoUrl": "/images/logos/matsukaze.png",
+            "homepageUrl": "https://www.matsukaze.co.jp"
+          }
         ]
       },
       {
         "name": "Adhesives",
         "subtitle": "Guaranteed 3x durability, quick drying, ideal for HCMC's humid climate.",
         "brands": [
-          { "name": "BL Lash Ultra Plus", "country": "(Korea)", "detail": "Popular choice, good retention, stable performance.", "logoUrl": "/images/logos/bllash.png", "homepageUrl": "https://bllashes.com" },
-          { "name": "Sky Glue S+", "country": "(Korea)", "detail": "Ultra-fast drying (1s), strong bond, suited for Master use.", "logoUrl": "/images/logos/skyglue.png", "homepageUrl": "https://www.skyglue.net" },
-          { "name": "Lash Makers Elite/Queen", "country": "(USA)", "detail": "Top-tier premium line, excellent humidity control, Master approved.", "logoUrl": "/images/logos/lashmakers.png", "homepageUrl": "https://lashmakers.com" },
-          { "name": "London Lash Pro", "country": "(UK)", "detail": "Power Bond / Crystal Bond – Excellent performance in high humidity.", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" }
+          {
+            "name": "BL Lash Ultra Plus",
+            "country": "(Korea)",
+            "detail": "Popular choice, good retention, stable performance.",
+            "logoUrl": "/images/logos/bllash.png",
+            "homepageUrl": "https://bllashes.com"
+          },
+          {
+            "name": "Sky Glue S+",
+            "country": "(Korea)",
+            "detail": "Ultra-fast drying (1s), strong bond, suited for Master use.",
+            "logoUrl": "/images/logos/skyglue.png",
+            "homepageUrl": "https://www.skyglue.net"
+          },
+          {
+            "name": "Lash Makers Elite/Queen",
+            "country": "(USA)",
+            "detail": "Top-tier premium line, excellent humidity control, Master approved.",
+            "logoUrl": "/images/logos/lashmakers.png",
+            "homepageUrl": "https://lashmakers.com"
+          },
+          {
+            "name": "London Lash Pro",
+            "country": "(UK)",
+            "detail": "Power Bond / Crystal Bond – Excellent performance in high humidity.",
+            "logoUrl": "/images/logos/londonlashpro.png",
+            "homepageUrl": "https://www.londonlashpro.com"
+          }
         ]
       },
       {
         "name": "Tweezers & Accessories",
         "subtitle": "Precision instruments, anti-static, supporting perfect fan creation by our technicians.",
         "brands": [
-          { "name": "Brilliant Beauty", "country": "(USA)", "detail": "High precision, perfect balance.", "logoUrl": "/images/logos/brilliant.png", "homepageUrl": "https://brilliant-beauty.co" },
-          { "name": "Vetus", "country": "(Switzerland)", "detail": "High-grade material, exceptional durability.", "logoUrl": "/images/logos/vetus.png", "homepageUrl": "https://www.vetus.com" },
-          { "name": "EBL Lashes", "country": "(USA)", "detail": "Ultra-light, anti-static design.", "logoUrl": "/images/logos/ebl.png", "homepageUrl": "https://ebllashes.com" },
-          { "name": "Remover & Primer", "country": "(Professional)", "detail": "Safe removal solution and prep to extend lash life.", "logoUrl": "/images/logos/prep.png", "homepageUrl": "#" }
+          {
+            "name": "Brilliant Beauty",
+            "country": "(USA)",
+            "detail": "High precision, perfect balance.",
+            "logoUrl": "/images/logos/brilliant.png",
+            "homepageUrl": "https://brilliant-beauty.co"
+          },
+          {
+            "name": "Vetus",
+            "country": "(Switzerland)",
+            "detail": "High-grade material, exceptional durability.",
+            "logoUrl": "/images/logos/vetus.png",
+            "homepageUrl": "https://www.vetus.com"
+          },
+          {
+            "name": "EBL Lashes",
+            "country": "(USA)",
+            "detail": "Ultra-light, anti-static design.",
+            "logoUrl": "/images/logos/ebl.png",
+            "homepageUrl": "https://ebllashes.com"
+          },
+          {
+            "name": "Remover & Primer",
+            "country": "(Professional)",
+            "detail": "Safe removal solution and prep to extend lash life.",
+            "logoUrl": "/images/logos/prep.png",
+            "homepageUrl": "#"
+          }
         ]
       }
     ]
@@ -106,30 +184,92 @@
     "legal_title": "Legal Information",
     "copyright_design": "Design by Nanky.",
     "social_links": [
-      { "name": "Facebook", "url": "https://www.facebook.com/nanky.beaute/", "icon": "f" },
-      { "name": "Instagram", "url": "https://www.instagram.com/nanky.beauty/", "icon": "📸" },
-      { "name": "Zalo", "url": "https://zalo.me/0852759678", "icon": "Z" },
-      { "name": "TikTok", "url": "https://www.tiktok.com/@nanky.beaute", "icon": "🎵" }
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/nanky.beaute/",
+        "icon": "f"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/nanky.beauty/",
+        "icon": "📸"
+      },
+      {
+        "name": "Zalo",
+        "url": "https://zalo.me/0852759678",
+        "icon": "Z"
+      },
+      {
+        "name": "TikTok",
+        "url": "https://www.tiktok.com/@nanky.beaute",
+        "icon": "🎵"
+      }
     ]
   },
   "testimonials_title": "What Our Clients Say About Nanky Beauty",
-  "review_1_quote": "My experience at Nanky Beauty in District 2 exceeded expectations! The technicians were meticulous, and the result is stunning and lasts a very long time.", "review_1_name": "Tran Mai A", "review_1_imageUrl": "/images/reviews/review-1.jpg",
-  "review_2_quote": "The space in Thao Dien is luxurious and absolutely relaxing. This is the only place I trust with my eyes in HCMC.", "review_2_name": "Nguyen Thi B", "review_2_imageUrl": "/images/reviews/review-2.jpg",
-  "review_3_quote": "I've tried many lash salons in District 2, but Nanky has the most personalized, high-level lash design style. My eyes are completely transformed!", "review_3_name": "Le Van C", "review_3_imageUrl": "/images/reviews/review-3.jpg",
-  "review_4_quote": "The ultra-soft Feather Lashes are so light; I barely feel them. A truly premium lash experience.", "review_4_name": "Pham Thu D", "review_4_imageUrl": "/images/reviews/review-4.jpg",
-  "review_5_quote": "The Master's technique is very professional; I didn't feel any stinging or discomfort. The best lash service in Thao Dien.", "review_5_name": "Vu Hai E", "review_5_imageUrl": "/images/reviews/review-5.jpg",
-  "review_6_quote": "The Korean glue holds extremely well; my lashes lasted twice as long. Affordable price for such high-end quality.", "review_6_name": "Hoang Minh F", "review_6_imageUrl": "/images/reviews/review-6.jpg",
-
-  "service_0_title": "Natural Classic Lashes", "service_0_desc": "The perfect choice for an elegant, natural look. A popular style for clients in District 2 for daily wear.", "service_0_imageUrl": "/images/uploads/xf59vbcqj97gcu6lhwfeuetac.jpg", "service_0_price": "450,000 VND",
-  "service_1_title": "Premium 3D/5D Volume Lashes", "service_1_desc": "Creates impressive thickness for a captivating, sharp look. Our most beloved volume lash service in Thao Dien, HCMC.", "service_1_imageUrl": "/images/uploads/ar4xbsyj337u6gd4j2big4hub.jpg", "service_1_price": "600,000 VND",
-  "service_2_title": "Exclusive Hybrid Design Lashes", "service_2_desc": "A combination of Classic and Volume, custom designed for your eye shape. A unique style only at Nanky Beauty District 2.", "service_2_imageUrl": "/images/uploads/zdapefz7ej52dx2on86rradnn.jpg", "service_2_price": "800,000 VND",
-  "service_3_title": "Professional Infill/Removal", "service_3_desc": "Professional infill and removal process, ensuring absolute safety for your natural lashes and eye health.", "service_3_imageUrl": "/images/uploads/jy53ug6qndan1jvruofvt0j74.jpg", "service_3_price": "Contact for Price",
-
+  "review_1_quote": "My experience at Nanky Beauty in District 2 exceeded expectations! The technicians were meticulous, and the result is stunning and lasts a very long time.",
+  "review_1_name": "Tran Mai A",
+  "review_1_imageUrl": "/images/reviews/review-1.jpg",
+  "review_2_quote": "The space in Thao Dien is luxurious and absolutely relaxing. This is the only place I trust with my eyes in HCMC.",
+  "review_2_name": "Nguyen Thi B",
+  "review_2_imageUrl": "/images/reviews/review-2.jpg",
+  "review_3_quote": "I've tried many lash salons in District 2, but Nanky has the most personalized, high-level lash design style. My eyes are completely transformed!",
+    "review_3_name": "Le Van C",
+    "review_3_imageUrl": "/images/reviews/review-3.jpg",
+  "review_4_quote": "The ultra-soft Feather Lashes are so light; I barely feel them. A truly premium lash experience.",
+  "review_4_name": "Pham Thu D",
+  "review_4_imageUrl": "/images/reviews/review-4.jpg",
+  "review_5_quote": "The Master's technique is very professional; I didn't feel any stinging or discomfort. The best lash service in Thao Dien.",
+  "review_5_name": "Vu Hai E",
+  "review_5_imageUrl": "/images/reviews/review-5.jpg",
+  "review_6_quote": "The Korean glue holds extremely well; my lashes lasted twice as long. Affordable price for such high-end quality.",
+  "review_6_name": "Hoang Minh F",
+  "review_6_imageUrl": "/images/reviews/review-6.jpg",
+  "service_0_title": "Natural Classic Lashes",
+  "service_0_desc": "The perfect choice for an elegant, natural look. A popular style for clients in District 2 for daily wear.",
+  "service_0_imageUrl": "/images/uploads/xf59vbcqj97gcu6lhwfeuetac.jpg",
+  "service_0_price": "450,000 VND",
+  "service_1_title": "Premium 3D/5D Volume Lashes",
+  "service_1_desc": "Creates impressive thickness for a captivating, sharp look. Our most beloved volume lash service in Thao Dien, HCMC.",
+  "service_1_imageUrl": "/images/uploads/ar4xbsyj337u6gd4j2big4hub.jpg",
+  "service_1_price": "600,000 VND",
+  "service_2_title": "Exclusive Hybrid Design Lashes",
+  "service_2_desc": "A combination of Classic and Volume, custom designed for your eye shape. A unique style only at Nanky Beauty District 2.",
+  "service_2_imageUrl": "/images/uploads/zdapefz7ej52dx2on86rradnn.jpg",
+  "service_2_price": "800,000 VND",
+  "service_3_title": "Professional Infill/Removal",
+  "service_3_desc": "Professional infill and removal process, ensuring absolute safety for your natural lashes and eye health.",
+  "service_3_imageUrl": "/images/uploads/jy53ug6qndan1jvruofvt0j74.jpg",
+  "service_3_price": "Contact for Price",
+  "service_4_title": "Premium Lash Perm",
+  "service_4_desc": "High-end lash perm using imported solutions. Provides long-lasting curl.",
+  "service_4_imageUrl": "/images/uploads/gcf2u5vv0klyfs2dmuev2t63w.jpg",
+  "service_4_price": "250,000 VND",
+  "service_5_title": "Eyebrow Lamination",
+  "service_5_desc": "Eyebrow Lamination is a beauty technique that makes eyebrows look thicker, sharper, and more defined.",
+  "service_5_imageUrl": "/images/uploads/u5o7a1o4vvrngo55lp1632j1p.jpg",
+  "service_5_price": "250,000 VND",
+  "service_6_title": "Lash Removal",
+  "service_6_desc": "The lash removal service is done gently and safely for the eye area, using professional solution and experienced technicians.",
+  "service_6_imageUrl": "/images/uploads/yf1vkybvmjaoyclq2pbtpsnj7.jpg",
+  "service_6_price": "Contact for Price",
+  "service_7_title": "Custom Designed Lashes",
+  "service_7_desc": "Custom designed according to each client's eye shape, style, and aura. Technicians meticulously choose the right curl, thickness, and shape to enhance natural beauty while being captivating.",
+  "service_7_imageUrl": "/images/uploads/ryqsyx2zda6e26mpmyhk41lub.jpg",
+  "service_7_price": "380,000 - 450,000 VND",
+  "service_8_title": "Lash Infill",
+  "service_8_desc": "Helps restore lashes after a period of extension, replacing shed lashes to keep the set thick, even, and as natural as new.",
+  "service_8_imageUrl": "/images/uploads/rvr246819gobvflpnyvaz4s2y.jpg",
+  "service_8_price": "Contact for Price",
+  "service_9_title": "Relaxing Scalp Spa & Shampoo",
+  "service_9_desc": "Relaxing service combined with acupressure massage, helps blood circulation and relieves stress.",
+  "service_9_imageUrl": "/images/uploads/iem4nkny3jq8d2u9jc7z8ulbi.jpg",
+  "service_9_price": "150,000 VND",
+  "gallery_teaser_title": "Customer Feedback",
   "gallery_teaser_image_0": "/images/gallery/mi-volume.jpg",
   "gallery_teaser_image_1": "/images/gallery/mi-classic.jpg",
   "gallery_teaser_image_2": "/images/gallery/mi-hybrid.jpg",
   "gallery_teaser_image_3": "/images/gallery/mi-style.jpg",
-  
   "about_page": {
     "hero_subtitle": "Artistry elevated by absolute lash technique.",
     "hero_image_url": "/images/uploads/shsfoo79g7zu8gpwx6yj6ilvb.jpg",
@@ -147,16 +287,16 @@
     "cta_about_button": "BOOK APPOINTMENT NOW",
     "seo": {
       "title": "About Nanky Beauty - Trusted Lash Salon in Thao Dien, District 2",
-      "description": "Learn about the journey, philosophy, and Master team at Nanky Beauty. We are committed to diligent technique, safe products, and an ultimate sterilization process in District 2, HCMC.",
-      "keywords": "about nanky beauty, professional lash artists district 2, nanky beauty story, eyelash extension philosophy thao dien"
+      "description": "Learn about the journey, philosophy, and Master team at Nanky Beauty. We are committed to diligent technique, safe products, and an ultimate sterilization process at the best lash salon in District 2, HCMC.",
+      "keywords": "about nanky beauty, professional lash artists district 2, nanky beauty story, eyelash extension philosophy thao dien, best lash salon district 2"
     }
   },
   "services_page": {
     "title": "All Premium Eyelash Extension Services in District 2",
     "seo": {
-      "title": "Eyelash Extension Price List in District 2, HCMC",
-      "description": "Explore the price list for all premium eyelash extension services at Nanky Beauty District 2: Classic, Volume, Hybrid Design lashes, and more. Book your appointment for beautiful, affordable, and trusted lashes today.",
-      "keywords": "lash extension price list district 2, lash services thao dien, volume lashes price, classic lashes cost"
+      "title": "Eyelash Extension Services & Price List (Thao Dien, District 2)",
+      "description": "Explore the price list for all premium eyelash extension services at Nanky Beauty, the top lash salon in Thao Dien, District 2. Book Classic, Volume, and Hybrid lashes today.",
+      "keywords": "eyelash extension price list district 2, lash services thao dien, volume lashes price, classic lashes cost, hybrid lashes near me"
     }
   },
   "contact_page": {
@@ -166,10 +306,23 @@
     "messenger": "Send Messenger Message",
     "whatsapp": "Contact WhatsApp",
     "instagram_chat": "Chat Instagram",
+    "map_embed_url": "http://googleusercontent.com/maps/google.com/1",
     "seo": {
       "title": "Contact & Book Eyelash Extensions in Thao Dien, District 2",
-      "description": "Contact Nanky Beauty via Hotline or Zalo for the quickest consultation and booking for eyelash extensions in Thao Dien, District 2, HCMC. Car parking is available.",
-      "keywords": "contact nanky beauty, book lash appointment district 2, nanky beauty phone number thao dien"
+      "description": "Contact Nanky Beauty (Thao Dien, District 2) via Hotline or Zalo for the quickest consultation and booking. Find the best 'eyelash extensions near me' with car parking available.",
+      "keywords": "contact nanky beauty, book lash appointment district 2, nanky beauty phone number thao dien, eyelash extensions near me district 2"
     }
-  }
+  },
+  "gallery_page": {
+    "title": "All Lash Works & Customer Feedback",
+    "subtitle": "Explore the latest eyelash extension works categorized by style: Classic, Volume, Custom Design, etc.",
+    "filter_all": "All",
+    "default_customer_name": "Anonymous Customer",
+    "seo": {
+      "title": "Lash Gallery (Thao Dien, District 2) | Nanky Beauty Feedback",
+      "description": "View the complete portfolio of Nanky Beauty's latest Volume, Classic, and Custom Design lash works. Authentic customer feedback photos in Thao Dien, HCMC (District 2).",
+      "keywords": "lash gallery district 2, customer feedback photos, eyelash works, volume lashes thao dien, classic lashes district 2"
+    }
+  },
+  "language_switcher_label": "Language"
 }

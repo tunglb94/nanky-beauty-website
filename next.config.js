@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Thêm dòng này để tạo bản build độc lập, tối ưu cho Docker
-  output: 'standalone',
-
-  // Các cấu hình khác của bạn (nếu có)
-  reactStrictMode: true,
+  // Bật chế độ xuất tĩnh (Static Export)
+  output: 'export', 
   
-  // Cấu hình để Next.js tương thích với styled-components
-  compiler: {
-    styledComponents: true,
+  // Vô hiệu hóa tính năng image optimization mặc định (không tương thích với export)
+  images: {
+    unoptimized: true,
   },
+  
+  // (Các cấu hình khác nếu có)
 };
 
 module.exports = nextConfig;

@@ -5,15 +5,37 @@ import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useI18n } from '../hooks/useI18n';
-import type { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router'; // Đảm bảo hook này được dùng
+import type { GetStaticProps } from 'next';
 
-// Import Lightbox
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+// THÊM CÁC MODULE NODE.JS DÙNG CHO getStaticProps (CHỈ CHẠY KHI BUILD CỤC BỘ)
+import fs from 'fs';
+import path from 'path';
 
-// Import Carousel
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// Các ngôn ngữ hỗ trợ (Cần đồng bộ với cấu hình i18n và sitemap)
+const SUPPORTED_LANGS = ['vi', 'en', 'ru', 'kr', 'zh']; 
+const URL = 'https://nankybeauty.com';
+
+// Hàm tiện ích để render hreflang tags (Tái sử dụng)
+const renderHreflangTags = (currentPath: string, supportedLangs: string[]) => {
+    const basePagePath = currentPath.replace(new RegExp(`^/(${supportedLangs.filter(l => l !== 'vi').join('|')})/`), '/');
+    const basePage = basePagePath === '/' ? '' : basePagePath.substring(1).split('/')[0];
+
+    return supportedLangs.map((lang) => {
+        const href = `${URL}/${lang === 'vi' ? basePage : `${lang}/${basePage}`}`.replace(/\/\/$/, '/');
+        const hreflangAttr = lang === 'vi' ? 'x-default' : lang; 
+
+        return (
+            <link 
+                key={lang} 
+                rel="alternate" 
+                hrefLang={hreflangAttr} 
+                href={href} 
+            />
+        );
+    });
+};
+
 
 // Styled components
 const PageWrapper = styled.div`
@@ -31,6 +53,49 @@ const PageTitle = styled.h1`
 
     @media (max-width: 768px) {
         font-size: 2.5rem;
+    }
+`;
+
+const PageSubtitle = styled.p`
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+`;
+
+const FilterContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    
+    @media (max-width: 768px) {
+        gap: 10px;
+        margin-bottom: 30px;
+        padding: 0 25px;
+    }
+`;
+
+const FilterButton = styled.button<{ $isActive: boolean }>`
+    background-color: ${({ $isActive }) => ($isActive ? '#C6A500' : '#f0f0f0')};
+    color: ${({ $isActive }) => ($isActive ? '#fff' : '#333')};
+    border: 1px solid ${({ $isActive }) => ($isActive ? '#C6A500' : '#ccc')};
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: #C6A500;
+        color: #fff;
+    }
+    
+    @media (max-width: 768px) {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 `;
 
@@ -104,15 +169,22 @@ const GalleryItem = styled(motion.div)`
             opacity: 1;
         }
     }
+    
+    @media (max-width: 768px) {
+        height: 350px;
+        .carousel .slide img {
+            height: 350px;
+        }
+    }
 `;
 
-// Interfaces
+// Interfaces (Đã định nghĩa trong file gốc gallery.tsx)
 interface GalleryProject {
   id: string;
   mainImage: string;
   additionalImages: string[];
   alt: string;
-  category: string;
+  category: string; // Tên category bằng ngôn ngữ hiện tại
   customerName: string;
   serviceDate: string;
   satisfaction: number;
@@ -120,49 +192,91 @@ interface GalleryProject {
 
 interface GalleryPageProps {
     galleryProjects: GalleryProject[];
+    categories: string[]; // Danh sách các category key (ví dụ: "Classic", "Volume")
 }
 
-const GalleryPage: React.FC<GalleryPageProps> = ({ galleryProjects = [] }) => {
+const GalleryPage: React.FC<GalleryPageProps> = ({ galleryProjects = [], categories = [] }) => {
+    // FIX LỖI: Chỉ destructuring t từ useI18n() và gọi useRouter() riêng
     const { t } = useI18n();
-    const [open, setOpen] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const router = useRouter(); 
+    const [activeFilter, setActiveFilter] = useState('all');
 
-    const allImagesForLightbox = galleryProjects.flatMap(p => 
-        [p.mainImage, ...(p.additionalImages || [])].map(src => ({ src }))
-    );
+    // SỬ DỤNG ĐÚNG KEYS TỪ gallery_page
+    const seoDataRaw = t('gallery_page.seo');
+    const seoData = typeof seoDataRaw === 'object' ? seoDataRaw : { title: '', description: '', keywords: '' };
+
+    const globalSeoRaw = t('global_seo');
+    const globalSeo = typeof globalSeoRaw === 'object' ? globalSeoRaw : { site_name: 'Nanky Beauty', title_separator: '|', default_og_image: '/images/social/default-sharing-image.jpg' };
+
+    const pageTitle = `${seoData.title} ${globalSeo.title_separator} ${globalSeo.site_name}`;
+    const pageHeaderText = t('gallery_page.title');
+    const pageSubtitleText = t('gallery_page.subtitle');
+    const filterAllText = t('gallery_page.filter_all');
+    const ogImage = globalSeo.default_og_image;
+
+
+    const filteredProjects = galleryProjects.filter(project => {
+        if (activeFilter === 'all') return true;
+        // Lọc dựa trên trường 'category' trong gallery.json
+        return project.category === activeFilter;
+    });
     
-    const findGlobalIndex = (projectIndex: number) => {
-        let globalIndex = 0;
-        for (let i = 0; i < projectIndex; i++) {
-            globalIndex += 1 + (galleryProjects[i].additionalImages?.length || 0);
-        }
-        return globalIndex;
-    }
-
-    const handleItemClick = (projectIndex: number, carouselIndex: number = 0) => {
-        let globalIndex = findGlobalIndex(projectIndex);
-        globalIndex += carouselIndex;
-        setCurrentIndex(globalIndex);
-        setOpen(true);
-    };
-
-    const pageTitleText = "Hình ảnh Feedback của Nanky Beauty";
-
     return (
         <>
             <Head>
-                <title>{pageTitleText} | Nối Mi Quận 2</title>
-                <meta name="description" content={`Xem hình ảnh feedback chân thực từ khách hàng đã trải nghiệm dịch vụ nối mi classic, volume, hybrid tại Nanky Beauty, Thảo Điền, Quận 2, TP.HCM.`} />
+                <title>{pageTitle}</title>
+                <meta name="description" content={seoData.description} />
+                <meta name="keywords" content={seoData.keywords} />
+                
+                {/* OPEN GRAPH TAGS (Chia sẻ mạng xã hội) */}
+                <meta property="og:title" content={pageTitle} />
+                <meta property="og:description" content={seoData.description} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${URL}${router.asPath}`} />
+                <meta property="og:site_name" content={globalSeo.site_name} />
+                <meta property="og:image" content={`${URL}${ogImage}`} />
+                {/* TWITTER CARD TAGS */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:description" content={seoData.description} />
+                <meta name="twitter:image" content={`${URL}${ogImage}`} />
+                
+                 {/* === HREFLANG TAGS === */}
+                {renderHreflangTags(router.asPath, SUPPORTED_LANGS)}
+                {/* ====================== */}
             </Head>
 
             <Header />
             <PageWrapper>
-                <PageTitle>{pageTitleText}</PageTitle>
+                <PageTitle>{pageHeaderText}</PageTitle>
+                <PageSubtitle>{pageSubtitleText}</PageSubtitle>
+
+                <FilterContainer>
+                    {/* Nút All */}
+                    <FilterButton 
+                        $isActive={activeFilter === 'all'} 
+                        onClick={() => setActiveFilter('all')}
+                    >
+                        {filterAllText}
+                    </FilterButton>
+                    
+                    {/* Các nút Category */}
+                    {categories.map((categoryName) => (
+                        <FilterButton
+                            key={categoryName}
+                            $isActive={activeFilter === categoryName}
+                            onClick={() => setActiveFilter(categoryName)}
+                        >
+                            {categoryName}
+                        </FilterButton>
+                    ))}
+                </FilterContainer>
+
                 <FullGalleryGrid>
                     <AnimatePresence>
-                        {(galleryProjects || []).map((project, index) => {
-                            const imagesForCarousel = [project.mainImage, ...(project.additionalImages || [])].filter(Boolean);
-                            const formattedDate = new Date(project.serviceDate).toLocaleDateString('vi-VN');
+                        {(filteredProjects || []).map((project, index) => {
+                            // Dữ liệu ngày tháng không có trong gallery.json gốc, nên không cần format.
+                            const satisfaction = project.satisfaction || 5;
 
                             return (
                                 <GalleryItem
@@ -172,35 +286,17 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ galleryProjects = [] }) => {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -50 }}
                                     transition={{ delay: index * 0.1, duration: 0.5 }}
-                                    onClick={() => handleItemClick(index)}
                                 >
                                     <div className="carousel-wrapper">
-                                        <Carousel
-                                            showArrows={imagesForCarousel.length > 1}
-                                            showStatus={false}
-                                            showIndicators={imagesForCarousel.length > 1}
-                                            showThumbs={false}
-                                            infiniteLoop={true}
-                                            autoPlay={imagesForCarousel.length > 1}
-                                            interval={4000 + Math.random() * 2000}
-                                            stopOnHover={true}
-                                            swipeable={true}
-                                            emulateTouch={true}
-                                            onClickItem={(carouselIndex) => handleItemClick(index, carouselIndex)}
-                                        >
-                                            {imagesForCarousel.map((imgSrc, imgIdx) => (
-                                                <div key={imgIdx}>
-                                                    <img src={imgSrc} alt={`${project.alt} - Ảnh ${imgIdx + 1}`} />
-                                                </div>
-                                            ))}
-                                        </Carousel>
+                                        {/* Hiển thị ảnh chính */}
+                                        <img src={project.mainImage} alt={project.alt} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                                     </div>
 
                                     <ItemOverlay>
                                         <p className="info-line">
-                                            {formattedDate} - {'⭐'.repeat(project.satisfaction)}
+                                             {project.category} - {'⭐'.repeat(satisfaction)}
                                         </p>
-                                        <h4>{project.customerName || "Khách hàng"}</h4>
+                                        <h4>{project.customerName || t('gallery_page.default_customer_name') || project.category}</h4>
                                     </ItemOverlay>
                                 </GalleryItem>
                             );
@@ -210,29 +306,42 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ galleryProjects = [] }) => {
             </PageWrapper>
             <Footer />
 
-            <Lightbox
-                open={open}
-                close={() => setOpen(false)}
-                slides={allImagesForLightbox}
-                index={currentIndex}
-            />
         </>
     );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-    const protocol = context.req.headers['x-forwarded-proto'] || 'http';
-    const host = context.req.headers.host;
-    const apiUrl = `${protocol}://${host}/api/gallery`;
+// Đã sửa lại GetStaticProps để chỉ đọc gallery.json và gallery-categories.json
+export const getStaticProps: GetStaticProps<GalleryPageProps> = async (context) => {
+    
+    const galleryFilePath = path.join(process.cwd(), 'src', 'locales', 'gallery.json');
+    const categoriesFilePath = path.join(process.cwd(), 'src', 'locales', 'gallery-categories.json');
 
+    let galleryProjects: GalleryProject[] = [];
+    let categories: string[] = [];
+    
     try {
-        const res = await fetch(apiUrl);
-        if (!res.ok) throw new Error('Failed to fetch gallery data');
-        const galleryProjects = await res.json();
-        return { props: { galleryProjects } };
+        const fileContent = fs.readFileSync(galleryFilePath, 'utf-8');
+        // gallery.json chứa: id, mainImage, additionalImages, alt, category, customerName, serviceDate, satisfaction
+        galleryProjects = JSON.parse(fileContent);
+
+        const categoriesContent = fs.readFileSync(categoriesFilePath, 'utf-8');
+        // gallery-categories.json chứa một mảng string: ["Classic", "Volume", ...]
+        categories = JSON.parse(categoriesContent);
+
+        return { 
+            props: { 
+                galleryProjects,
+                categories
+            },
+        };
     } catch (error) {
-        console.error(error);
-        return { props: { galleryProjects: [] } };
+        console.error("Lỗi khi đọc gallery data:", error);
+        return { 
+            props: { 
+                galleryProjects: [],
+                categories: []
+            } 
+        };
     }
 };
 

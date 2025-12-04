@@ -24,7 +24,7 @@ const MaterialsWrapper = styled.section`
   text-align: center;
 
   @media (max-width: 768px) {
-    padding: 60px 25px;
+    padding: 40px 25px; /* ĐÃ TỐI ƯU: Giảm padding dọc */
   }
 `;
 
@@ -34,7 +34,7 @@ const SectionTitle = styled(motion.h2)`
   margin-bottom: 20px;
   
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2rem; /* ĐÃ TỐI ƯU: Giảm cỡ chữ tiêu đề chính */
   }
 `;
 
@@ -46,6 +46,7 @@ const SectionDescription = styled(motion.p)`
 
     @media (max-width: 768px) {
         margin-bottom: 40px;
+        font-size: 1rem; /* Tối ưu cỡ chữ */
     }
 `;
 
@@ -76,6 +77,11 @@ const MaterialCategoryCard = styled(motion.div)`
         transform: translateY(-5px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     }
+    
+    /* === TỐI ƯU MOBILE: Giảm padding thẻ con === */
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
 `;
 
 const CategoryHeader = styled.div`
@@ -87,6 +93,11 @@ const CategoryTitle = styled.h4`
     color: #C6A500; 
     margin-bottom: 5px;
     font-weight: 700;
+    
+    /* === TỐI ƯU MOBILE: Giảm cỡ chữ tiêu đề danh mục === */
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const CategorySubtitle = styled.p`
@@ -156,7 +167,8 @@ const BrandCountry = styled.span`
 const BrandDetail = styled.span`
     color: #666;
     font-size: 0.95rem;
-    margin-left: 40px; 
+    /* Đã giảm margin-left để bù cho việc xóa Logo */
+    margin-left: 0; 
 `;
 
 const BrandHomepage = styled.a`
@@ -164,7 +176,8 @@ const BrandHomepage = styled.a`
     font-size: 0.8rem;
     color: #aaa;
     margin-top: 5px;
-    margin-left: 40px; 
+    /* Đã giảm margin-left để bù cho việc xóa Logo */
+    margin-left: 0; 
     text-decoration: none;
     
     &:hover {
@@ -247,7 +260,7 @@ const MaterialsSection: React.FC = () => {
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                     >
-                                        {brand.logoUrl && <BrandLogo src={brand.logoUrl} alt={`Logo thương hiệu ${brand.name}`} />}
+                                        {/* ĐÃ XÓA: Bỏ BrandLogo */}
                                         <BrandName>
                                             {brand.name}
                                             <BrandCountry>{brand.country}</BrandCountry>

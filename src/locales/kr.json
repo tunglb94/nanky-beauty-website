@@ -16,11 +16,11 @@
     "title": "NANKY BEAUTY 2군",
     "subtitle": "호치민 타오디엔 2군의 프리미엄 국제 표준 속눈썹 연장 아트. 최고의 기술과 마스터 기법을 자랑합니다.",
     "cta_explore": "속눈썹 서비스 둘러보기",
-    "backgroundUrl": "/images/uploads/nrvgsfdgzknvcr4cry3dxk3o8.jpg",
+    "backgroundUrl": "/images/uploads/hrhwocezzlphqfkak3lhzaekf.webp",
     "seo": {
-      "title": "호치민 2군 속눈썹 연장 잘하는 곳 - 타오디엔 | Nanky Beauty",
-      "description": "Nanky Beauty는 호치민 2군 타오디엔에 위치한 전문 속눈썹 연장 샵입니다. 고품질 볼륨, 클래식, 하이브리드 속눈썹 서비스를 제공합니다. 안전하고 아름다우며 합리적인 가격.",
-      "keywords": "2군 속눈썹, 타오디엔 속눈썹, 호치민 속눈썹 연장, 2군 속눈썹 잘하는 곳, 2군 속눈썹 가격, 호치민 프리미엄 속눈썹, nanky beauty, 근처 속눈썹 샵"
+      "title": "2군 속눈썹 연장 잘하는 곳 | 타오디엔 속눈썹 | Nanky Beauty",
+      "description": "호치민 2군(타오디엔)에서 '근처 속눈썹 샵'을 찾으시나요? Nanky Beauty는 프리미엄 볼륨, 클래식 속눈썹 연장 전문 샵입니다. 안전하고 아름다운 시술을 경험하세요.",
+      "keywords": "2군 속눈썹, 타오디엔 속눈썹, 2군 속눈썹 연장, 2군 속눈썹 잘하는 곳, 근처 속눈썹 샵, 호치민 속눈썹 연장, nanky beauty, 2군 속눈썹 가격"
     }
   },
   "why_us": {
@@ -55,31 +55,109 @@
         "name": "속눈썹 (Lashes)",
         "subtitle": "초경량, 자연스러운 느낌과 뛰어난 유지력을 제공합니다.",
         "brands": [
-          { "name": "난키 뷰티 래쉬", "country": "(단독)", "detail": "페더, 밍크, 래빗, 베이비 래쉬 – 독점, 초연질, 초경량.", "logoUrl": "/images/logos/nanky-exclusive.png", "homepageUrl": "#" },
-          { "name": "Lash Box LA", "country": "(미국)", "detail": "세계 최고 브랜드, 초미세 재료, 완벽한 팬.", "logoUrl": "/images/logos/lashboxla.png", "homepageUrl": "https://www.lashboxla.com" },
-          { "name": "London Lash Pro", "country": "(영국)", "detail": "짙은 검정색, 완벽한 컬, 유럽 시장에서 신뢰받음.", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" },
-          { "name": "NAGARAKU", "country": "(한국)", "detail": "베트남에서 인기, 안정적인 품질, 경쟁력 있는 가격.", "logoUrl": "/images/logos/nagarauku.png", "homepageUrl": "https://nagaraku.com" },
-          { "name": "Matsukaze / Nichiban", "country": "(일본)", "detail": "럭셔리 라인, 극도로 자연스럽고 세련된 룩을 선사.", "logoUrl": "/images/logos/matsukaze.png", "homepageUrl": "https://www.matsukaze.co.jp" }
+          {
+            "name": "난키 뷰티 래쉬",
+            "country": "(단독)",
+            "detail": "페더, 밍크, 래빗, 베이비 래쉬 – 독점, 초연질, 초경량.",
+            "logoUrl": "/images/logos/nanky-exclusive.png",
+            "homepageUrl": "#"
+          },
+          {
+            "name": "Lash Box LA",
+            "country": "(미국)",
+            "detail": "세계 최고 브랜드, 초미세 재료, 완벽한 팬.",
+            "logoUrl": "/images/logos/lashboxla.png",
+            "homepageUrl": "https://www.lashboxla.com"
+          },
+          {
+            "name": "London Lash Pro",
+            "country": "(영국)",
+            "detail": "짙은 검정색, 완벽한 컬, 유럽 시장에서 신뢰받음.",
+            "logoUrl": "/images/logos/londonlashpro.png",
+            "homepageUrl": "https://www.londonlashpro.com"
+          },
+          {
+            "name": "NAGARAKU",
+            "country": "(한국)",
+            "detail": "베트남에서 인기, 안정적인 품질, 경쟁력 있는 가격.",
+            "logoUrl": "/images/logos/nagarauku.png",
+            "homepageUrl": "https://nagaraku.com"
+          },
+          {
+            "name": "Matsukaze / Nichiban",
+            "country": "(일본)",
+            "detail": "럭셔리 라인, 극도로 자연스럽고 세련된 룩을 선사.",
+            "logoUrl": "/images/logos/matsukaze.png",
+            "homepageUrl": "https://www.matsukaze.co.jp"
+          }
         ]
       },
       {
         "name": "접착제 (Adhesives)",
         "subtitle": "3배의 내구성, 빠른 건조, 호치민의 습한 기후에 이상적.",
         "brands": [
-          { "name": "BL Lash Ultra Plus", "country": "(한국)", "detail": "인기 있는 선택, 좋은 유지력, 안정적인 성능.", "logoUrl": "/images/logos/bllash.png", "homepageUrl": "https://bllashes.com" },
-          { "name": "Sky Glue S+", "country": "(한국)", "detail": "초고속 건조 (1초), 강력한 접착력, 마스터 사용에 적합.", "logoUrl": "/images/logos/skyglue.png", "homepageUrl": "https://www.skyglue.net" },
-          { "name": "Lash Makers Elite/Queen", "country": "(미국)", "detail": "최고급 프리미엄 라인, 우수한 습도 조절, 마스터 승인.", "logoUrl": "/images/logos/lashmakers.png", "homepageUrl": "https://lashmakers.com" },
-          { "name": "London Lash Pro", "country": "(영국)", "detail": "Power Bond / Crystal Bond – 고습도 환경에서 우수한 성능.", "logoUrl": "/images/logos/londonlashpro.png", "homepageUrl": "https://www.londonlashpro.com" }
+          {
+            "name": "BL Lash Ultra Plus",
+            "country": "(한국)",
+            "detail": "인기 있는 선택, 좋은 유지력, 안정적인 성능.",
+            "logoUrl": "/images/logos/bllash.png",
+            "homepageUrl": "https://bllashes.com"
+          },
+          {
+            "name": "Sky Glue S+",
+            "country": "(한국)",
+            "detail": "초고속 건조 (1초), 강력한 접착력, 마스터 사용에 적합.",
+            "logoUrl": "/images/logos/skyglue.png",
+            "homepageUrl": "https://www.skyglue.net"
+          },
+          {
+            "name": "Lash Makers Elite/Queen",
+            "country": "(미국)",
+            "detail": "최고급 프리미엄 라인, 우수한 습도 조절, 마스터 승인.",
+            "logoUrl": "/images/logos/lashmakers.png",
+            "homepageUrl": "https://lashmakers.com"
+          },
+          {
+            "name": "London Lash Pro",
+            "country": "(영국)",
+            "detail": "Power Bond / Crystal Bond – 고습도 환경에서 우수한 성능.",
+            "logoUrl": "/images/logos/londonlashpro.png",
+            "homepageUrl": "https://www.londonlashpro.com"
+          }
         ]
       },
       {
         "name": "핀셋 및 액세서리",
         "subtitle": "정밀 도구, 정전기 방지, 기술자의 완벽한 팬 생성을 지원.",
         "brands": [
-          { "name": "Brilliant Beauty", "country": "(미국)", "detail": "높은 정밀도, 완벽한 균형.", "logoUrl": "/images/logos/brilliant.png", "homepageUrl": "https://brilliant-beauty.co" },
-          { "name": "Vetus", "country": "(스위스)", "detail": "고급 재료, 뛰어난 내구성.", "logoUrl": "/images/logos/vetus.png", "homepageUrl": "https://www.vetus.com" },
-          { "name": "EBL Lashes", "country": "(미국)", "detail": "초경량, 정전기 방지 디자인.", "logoUrl": "/images/logos/ebl.png", "homepageUrl": "https://ebllashes.com" },
-          { "name": "리무버 및 프라이머", "country": "(전문용)", "detail": "안전한 제거 솔루션 및 속눈썹 수명 연장을 위한 준비.", "logoUrl": "/images/logos/prep.png", "homepageUrl": "#" }
+          {
+            "name": "Brilliant Beauty",
+            "country": "(미국)",
+            "detail": "높은 정밀도, 완벽한 균형.",
+            "logoUrl": "/images/logos/brilliant.png",
+            "homepageUrl": "https://brilliant-beauty.co"
+          },
+          {
+            "name": "Vetus",
+            "country": "(스위스)",
+            "detail": "고급 재료, 뛰어난 내구성.",
+            "logoUrl": "/images/logos/vetus.png",
+            "homepageUrl": "https://www.vetus.com"
+          },
+          {
+            "name": "EBL Lashes",
+            "country": "(미국)",
+            "detail": "초경량, 정전기 방지 디자인.",
+            "logoUrl": "/images/logos/ebl.png",
+            "homepageUrl": "https://ebllashes.com"
+          },
+          {
+            "name": "리무버 및 프라이머",
+            "country": "(전문용)",
+            "detail": "안전한 제거 솔루션 및 속눈썹 수명 연장을 위한 준비.",
+            "logoUrl": "/images/logos/prep.png",
+            "homepageUrl": "#"
+          }
         ]
       }
     ]
@@ -106,30 +184,92 @@
     "legal_title": "법적 정보",
     "copyright_design": "디자인: 난키.",
     "social_links": [
-      { "name": "Facebook", "url": "https://www.facebook.com/nanky.beaute/", "icon": "f" },
-      { "name": "Instagram", "url": "https://www.instagram.com/nanky.beauty/", "icon": "📸" },
-      { "name": "Zalo", "url": "https://zalo.me/0852759678", "icon": "Z" },
-      { "name": "TikTok", "url": "https://www.tiktok.com/@nanky.beaute", "icon": "🎵" }
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/nanky.beaute/",
+        "icon": "f"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/nanky.beauty/",
+        "icon": "📸"
+      },
+      {
+        "name": "Zalo",
+        "url": "https://zalo.me/0852759678",
+        "icon": "Z"
+      },
+      {
+        "name": "TikTok",
+        "url": "https://www.tiktok.com/@nanky.beaute",
+        "icon": "🎵"
+      }
     ]
   },
   "testimonials_title": "고객들이 Nanky Beauty에 대해 말하는 것",
-  "review_1_quote": "2군 난키 뷰티에서의 경험은 기대를 훨씬 뛰어넘었습니다! 기술자들은 꼼꼼했고, 결과는 놀랍도록 아름답고 오래 지속됩니다.", "review_1_name": "Tran Mai A", "review_1_imageUrl": "/images/reviews/review-1.jpg",
-  "review_2_quote": "타오디엔의 공간은 고급스럽고 완벽하게 편안합니다. 이곳은 제가 호치민에서 눈을 맡기는 유일한 곳입니다.", "review_2_name": "Nguyen Thi B", "review_2_imageUrl": "/images/reviews/review-2.jpg",
-  "review_3_quote": "2군에 있는 많은 속눈썹 샵을 가봤지만, 난키는 가장 개인화된 하이레벨 속눈썹 디자인 스타일을 가지고 있습니다. 제 눈이 완전히 달라졌어요!", "review_3_name": "Le Van C", "review_3_imageUrl": "/images/reviews/review-3.jpg",
-  "review_4_quote": "초연질 페더 래쉬는 너무 가벼워서 거의 느껴지지 않습니다. 진정한 프리미엄 속눈썹 경험입니다.", "review_4_name": "Pham Thu D", "review_4_imageUrl": "/images/reviews/review-4.jpg",
-  "review_5_quote": "마스터의 기술은 매우 전문적이며, 따끔거리거나 불편함이 전혀 없었습니다. 타오디엔 최고의 속눈썹 서비스입니다.", "review_5_name": "Vu Hai E", "review_5_imageUrl": "/images/reviews/review-5.jpg",
-  "review_6_quote": "한국산 접착제가 매우 잘 붙어서, 제 속눈썹은 다른 곳보다 두 배 더 오래 유지되었습니다. 이런 고급 품질에 합리적인 가격이라니.", "review_6_name": "Hoang Minh F", "review_6_imageUrl": "/images/reviews/review-6.jpg",
-
-  "service_0_title": "내추럴 클래식 래쉬", "service_0_desc": "우아하고 자연스러운 룩을 위한 완벽한 선택. 2군 고객들이 데일리로 많이 찾는 스타일입니다.", "service_0_imageUrl": "/images/uploads/xf59vbcqj97gcu6lhwfeuetac.jpg", "service_0_price": "450,000 VND",
-  "service_1_title": "프리미엄 3D/5D 볼륨 래쉬", "service_1_desc": "인상적인 풍성함으로 매혹적이고 또렷한 눈매를 연출합니다. 타오디엔에서 가장 사랑받는 볼륨 래쉬 서비스입니다.", "service_1_imageUrl": "/images/uploads/ar4xbsyj337u6gd4j2big4hub.jpg", "service_1_price": "600,000 VND",
-  "service_2_title": "독점 하이브리드 디자인 래쉬", "service_2_desc": "클래식과 볼륨의 조합으로, 눈 모양에 맞게 맞춤 디자인됩니다. Nanky Beauty 2군에서만 만날 수 있는 독특한 스타일입니다.", "service_2_imageUrl": "/images/uploads/zdapefz7ej52dx2on86rradnn.jpg", "service_2_price": "800,000 VND",
-  "service_3_title": "전문 리필/제거", "service_3_desc": "전문적인 리필 및 제거 과정으로, 자연 속눈썹과 눈 건강의 절대적인 안전을 보장합니다.", "service_3_imageUrl": "/images/uploads/jy53ug6qndan1jvruofvt0j74.jpg", "service_3_price": "가격 문의",
-  
+  "review_1_quote": "2군 난키 뷰티에서의 경험은 기대를 훨씬 뛰어넘었습니다! 기술자들은 꼼꼼했고, 결과는 놀랍도록 아름답고 오래 지속됩니다.",
+  "review_1_name": "Tran Mai A",
+  "review_1_imageUrl": "/images/reviews/review-1.jpg",
+  "review_2_quote": "타오디엔의 공간은 고급스럽고 완벽하게 편안합니다. 이곳은 제가 호치민에서 눈을 맡기는 유일한 곳입니다.",
+  "review_2_name": "Nguyen Thi B",
+  "review_2_imageUrl": "/images/reviews/review-2.jpg",
+  "review_3_quote": "2군에 있는 많은 속눈썹 샵을 가봤지만, 난키는 가장 개인화된 하이레벨 속눈썹 디자인 스타일을 가지고 있습니다. 제 눈이 완전히 달라졌어요!",
+  "review_3_name": "Le Van C",
+  "review_3_imageUrl": "/images/reviews/review-3.jpg",
+  "review_4_quote": "초연질 페더 래쉬는 너무 가벼워서 거의 느껴지지 않습니다. 진정한 프리미엄 속눈썹 경험입니다.",
+  "review_4_name": "Pham Thu D",
+  "review_4_imageUrl": "/images/reviews/review-4.jpg",
+  "review_5_quote": "마스터의 기술은 매우 전문적이며, 따끔거리거나 불편함이 전혀 없었습니다. 타오디엔 최고의 속눈썹 서비스입니다.",
+  "review_5_name": "Vu Hai E",
+  "review_5_imageUrl": "/images/reviews/review-5.jpg",
+  "review_6_quote": "한국산 접착제가 매우 잘 붙어서, 제 속눈썹은 다른 곳보다 두 배 더 오래 유지되었습니다. 이런 고급 품질에 합리적인 가격이라니.",
+  "review_6_name": "Hoang Minh F",
+  "review_6_imageUrl": "/images/reviews/review-6.jpg",
+  "service_0_title": "내추럴 클래식 래쉬",
+  "service_0_desc": "우아하고 자연스러운 룩을 위한 완벽한 선택. 2군 고객들이 데일리로 많이 찾는 스타일입니다.",
+  "service_0_imageUrl": "/images/uploads/xf59vbcqj97gcu6lhwfeuetac.jpg",
+  "service_0_price": "450,000 VND",
+  "service_1_title": "프리미엄 3D/5D 볼륨 래쉬",
+  "service_1_desc": "인상적인 풍성함으로 매혹적이고 또렷한 눈매를 연출합니다. 타오디엔에서 가장 사랑받는 볼륨 래쉬 서비스입니다.",
+  "service_1_imageUrl": "/images/uploads/ar4xbsyj337u6gd4j2big4hub.jpg",
+  "service_1_price": "600,000 VND",
+  "service_2_title": "독점 하이브리드 디자인 래쉬",
+  "service_2_desc": "클래식과 볼륨의 조합으로, 눈 모양에 맞게 맞춤 디자인됩니다. Nanky Beauty 2군에서만 만날 수 있는 독특한 스타일입니다.",
+  "service_2_imageUrl": "/images/uploads/zdapefz7ej52dx2on86rradnn.jpg",
+  "service_2_price": "800,000 VND",
+  "service_3_title": "전문 리필/제거",
+  "service_3_desc": "전문적인 리필 및 제거 과정으로, 자연 속눈썹과 눈 건강의 절대적인 안전을 보장합니다.",
+  "service_3_imageUrl": "/images/uploads/jy53ug6qndan1jvruofvt0j74.jpg",
+  "service_3_price": "가격 문의",
+  "service_4_title": "프리미엄 속눈썹 펌",
+  "service_4_desc": "수입 제품을 사용한 고급 속눈썹 펌. 지속력이 뛰어납니다.",
+  "service_4_imageUrl": "/images/uploads/gcf2u5vv0klyfs2dmuev2t63w.jpg",
+  "service_4_price": "250,000 VND",
+  "service_5_title": "눈썹 라미네이션",
+  "service_5_desc": "눈썹을 더 풍성하고 선명하게 보이게 하는 미용 기술입니다.",
+  "service_5_imageUrl": "/images/uploads/u5o7a1o4vvrngo55lp1632j1p.jpg",
+  "service_5_price": "250,000 VND",
+  "service_6_title": "속눈썹 제거",
+  "service_6_desc": "전문 용액과 숙련된 기술자가 안전하고 부드럽게 속눈썹을 제거합니다.",
+  "service_6_imageUrl": "/images/uploads/yf1vkybvmjaoyclq2pbtpsnj7.jpg",
+  "service_6_price": "가격 문의",
+  "service_7_title": "맞춤 디자인 속눈썹",
+  "service_7_desc": "고객의 눈 모양, 스타일, 분위기에 맞춰 맞춤 디자인됩니다. 자연스러운 아름다움을 극대화하도록 컬, 두께, 모양을 세심하게 선택합니다.",
+  "service_7_imageUrl": "/images/uploads/ryqsyx2zda6e26mpmyhk41lub.jpg",
+  "service_7_price": "380,000 - 450,000 VND",
+  "service_8_title": "속눈썹 리필/교체",
+  "service_8_desc": "시술 후 일정 기간이 지난 후 빠진 속눈썹을 채워 넣어 원래처럼 풍성하고 자연스럽게 유지합니다.",
+  "service_8_imageUrl": "/images/uploads/rvr246819gobvflpnyvaz4s2y.jpg",
+  "service_8_price": "가격 문의",
+  "service_9_title": "릴렉스 두피 마사지 및 샴푸",
+  "service_9_desc": "두피 지압 마사지를 결합한 릴렉스 서비스로, 혈액 순환을 돕고 스트레스를 해소합니다.",
+  "service_9_imageUrl": "/images/uploads/iem4nkny3jq8d2u9jc7z8ulbi.jpg",
+  "service_9_price": "150,000 VND",
+  "gallery_teaser_title": "고객 후기",
   "gallery_teaser_image_0": "/images/gallery/mi-volume.jpg",
   "gallery_teaser_image_1": "/images/gallery/mi-classic.jpg",
   "gallery_teaser_image_2": "/images/gallery/mi-hybrid.jpg",
   "gallery_teaser_image_3": "/images/gallery/mi-style.jpg",
-  
   "about_page": {
     "hero_subtitle": "완벽한 속눈썹 기술로 승화된 예술성.",
     "hero_image_url": "/images/uploads/shsfoo79g7zu8gpwx6yj6ilvb.jpg",
@@ -154,22 +294,35 @@
   "services_page": {
     "title": "2군의 모든 프리미엄 속눈썹 연장 서비스",
     "seo": {
-      "title": "호치민 2군 속눈썹 연장 가격표",
-      "description": "Nanky Beauty 2군의 모든 프리미엄 속눈썹 연장 서비스 가격표를 확인하세요: 클래식, 볼륨, 하이브리드 디자인 등. 오늘 아름답고 합리적인 가격의 신뢰할 수 있는 속눈썹을 예약하세요.",
-      "keywords": "2군 속눈썹 가격표, 타오디엔 속눈썹 서비스, 볼륨 래쉬 가격, 클래식 래쉬 비용"
+      "title": "호치민 2군 속눈썹 연장 가격표 (타오디엔)",
+      "description": "Nanky Beauty 2군의 모든 프리미엄 속눈썹 연장 서비스 가격표를 확인하세요: 클래식, 볼륨, 하이브리드 디자인 등. 타오디엔 최고의 속눈썹을 예약하세요.",
+      "keywords": "2군 속눈썹 가격표, 타오디엔 속눈썹 서비스, 볼륨 래쉬 가격, 클래식 래쉬 비용, 2군 속눈썹"
     }
   },
   "contact_page": {
-    "title": "2군에서 속눈썹 연장 문의 및 예약",
+    "title": "2군 속눈썹 연장 문의 및 예약",
     "cta_header": "빠른 연락처",
     "zalo": "Zalo 문의",
     "messenger": "Messenger 메시지 보내기",
     "whatsapp": "WhatsApp 문의",
     "instagram_chat": "Instagram 채팅",
+    "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1235472856015!2d106.73373207438137!3d10.80309995856947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752614b162f433%3A0xc39f826372d8295b!2zNzEgVsOgbmggxJDDgGkgVMOieSwgQW4gS2jDoW5oLCBRdeG6rW4gMi4gVFAuIEhDTQ!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s",
     "seo": {
-      "title": "타오디엔, 2군 속눈썹 연장 문의 및 예약",
-      "description": "호치민 2군 타오디엔에서 가장 빠른 속눈썹 연장 상담 및 예약을 위해 핫라인 또는 Zalo를 통해 Nanky Beauty에 문의하세요. 주차 가능.",
-      "keywords": "nanky beauty 연락처, 2군 속눈썹 예약, 타오디엔 nanky beauty 전화번호"
+      "title": "타오디엔 2군 속눈썹 연장 문의 및 예약 | Nanky Beauty",
+      "description": "호치민 2군 타오디엔에서 가장 빠른 속눈썹 연장 상담 및 예약을 위해 핫라인 또는 Zalo를 통해 Nanky Beauty에 문의하세요. '근처 속눈썹 샵' 중 최고.",
+      "keywords": "nanky beauty 연락처, 2군 속눈썹 예약, 타오디엔 nanky beauty 전화번호, 근처 속눈썹 샵"
     }
-  }
+  },
+  "gallery_page": {
+    "title": "모든 시술 작품 및 고객 후기",
+    "subtitle": "클래식, 볼륨, 맞춤 디자인 등 스타일별로 정렬된 최신 속눈썹 연장 작품을 살펴보세요.",
+    "filter_all": "전체",
+    "default_customer_name": "익명 고객",
+    "seo": {
+      "title": "2군 속눈썹 연장 갤러리 및 사진 후기 (타오디엔)",
+      "description": "볼륨, 클래식, 맞춤 디자인 스타일의 Nanky Beauty 전체 작품 포트폴리오를 확인하세요. 호치민 타오디엔 고객의 실제 사진 후기.",
+      "keywords": "2군 속눈썹 갤러리, 고객 후기 사진, 속눈썹 시술 작품, 볼륨 연장, 클래식 연장, 타오디엔 속눈썹"
+    }
+  },
+  "language_switcher_label": "언어"
 }
